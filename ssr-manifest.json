@@ -1,0 +1,410 @@
+{
+  "node_modules/image-extensions/image-extensions.json": [
+    "/build/assets/ChapterForm-7gLag-KW.js"
+  ],
+  "node_modules/laravel-vite-plugin/inertia-helpers/index.js": [],
+  "resources/js/Components/Admin/AdminHeader.tsx": [
+    "/build/assets/AdminHeader-YTxyOtPd.js"
+  ],
+  "resources/js/Components/Admin/User/UserApiList.tsx": [
+    "/build/assets/Index-7zbrUwer.js"
+  ],
+  "resources/js/Components/ApplicationLogo.tsx": [
+    "/build/assets/ApplicationLogo-Bn7DjPlp.js"
+  ],
+  "resources/js/Components/Auth/GoogleAuthButton.tsx": [
+    "/build/assets/GoogleAuthButton-IW0MHI8V.js"
+  ],
+  "resources/js/Components/Author/AvatarInput.tsx": [
+    "/build/assets/UserProfileHeader-Xti_Ol_w.js"
+  ],
+  "resources/js/Components/Book/BookCard.tsx": [
+    "/build/assets/BookList-Dvxi3-FX.js"
+  ],
+  "resources/js/Components/Book/BookHeader.tsx": [
+    "/build/assets/BookHeader-rnSloSRH.js"
+  ],
+  "resources/js/Components/Book/BookList.tsx": [
+    "/build/assets/BookList-Dvxi3-FX.js"
+  ],
+  "resources/js/Components/Book/FavouriteButton.tsx": [
+    "/build/assets/BookHeader-rnSloSRH.js"
+  ],
+  "resources/js/Components/Book/Form/BookForm.tsx": [
+    "/build/assets/BookForm-R56bU4bD.js"
+  ],
+  "resources/js/Components/Book/Form/CoverInput.tsx": [
+    "/build/assets/BookForm-R56bU4bD.js"
+  ],
+  "resources/js/Components/Book/Form/CreateBookForm.tsx": [
+    "/build/assets/Create-CIlgSOUq.js"
+  ],
+  "resources/js/Components/Book/Form/EditBookForm.tsx": [
+    "/build/assets/Edit-BPioScnQ.js"
+  ],
+  "resources/js/Components/Book/Hooks/useBookList.ts": [
+    "/build/assets/Type-50V-z8Ff.js"
+  ],
+  "resources/js/Components/Book/Hooks/useFavoriteButton.ts": [
+    "/build/assets/BookHeader-rnSloSRH.js"
+  ],
+  "resources/js/Components/Book/LatestBookCard.tsx": [
+    "/build/assets/Welcome-BM0BxMPX.js"
+  ],
+  "resources/js/Components/Book/LatestBookList.tsx": [
+    "/build/assets/Welcome-BM0BxMPX.js"
+  ],
+  "resources/js/Components/Book/SuggestBookCarousel.tsx": [
+    "/build/assets/SuggestBookCarousel-DjQ287cR.js"
+  ],
+  "resources/js/Components/Card.tsx": [
+    "/build/assets/Card-Dj6_F9pc.js"
+  ],
+  "resources/js/Components/CardHeader.tsx": [
+    "/build/assets/AdminHeader-YTxyOtPd.js"
+  ],
+  "resources/js/Components/Cart/CartSummary.tsx": [
+    "/build/assets/Cart-DlLTvFg5.js"
+  ],
+  "resources/js/Components/Cart/CartTable.tsx": [
+    "/build/assets/Cart-DlLTvFg5.js"
+  ],
+  "resources/js/Components/Chapter/ChapterBookList.tsx": [
+    "/build/assets/Show-ghyHdGks.js"
+  ],
+  "resources/js/Components/Chapter/ChapterPageList.tsx": [
+    "/build/assets/Show-fEaC6J-H.js"
+  ],
+  "resources/js/Components/Chapter/Drawer/HamburgerMenu.tsx": [
+    "/build/assets/FooterLayout-DOY91SPS.js"
+  ],
+  "resources/js/Components/Chapter/Drawer/HamburgurMenuDrawer.tsx": [
+    "/build/assets/FooterLayout-DOY91SPS.js"
+  ],
+  "resources/js/Components/Chapter/Drawer/PageDrawer.tsx": [
+    "/build/assets/MangaLayout-BG3ZyHTG.js"
+  ],
+  "resources/js/Components/Chapter/Form/ChapterForm.tsx": [
+    "/build/assets/ChapterForm-7gLag-KW.js"
+  ],
+  "resources/js/Components/Chapter/Form/CreateChapterForm.tsx": [
+    "/build/assets/Create-wfDoPQqf.js"
+  ],
+  "resources/js/Components/Chapter/Form/EditChapterForm.tsx": [
+    "/build/assets/Edit-B8_3xJ1x.js"
+  ],
+  "resources/js/Components/Chapter/Form/MangaForm.tsx": [
+    "/build/assets/ChapterForm-7gLag-KW.js"
+  ],
+  "resources/js/Components/Chapter/Form/MangaPageInput.tsx": [
+    "/build/assets/ChapterForm-7gLag-KW.js"
+  ],
+  "resources/js/Components/Checkbox.tsx": [
+    "/build/assets/Login-DGvGRmb_.js"
+  ],
+  "resources/js/Components/Common/InertiaPagiantion.tsx": [
+    "/build/assets/Index-qhaztuBn.js"
+  ],
+  "resources/js/Components/DangerButton.tsx": [
+    "/build/assets/DeleteUserForm-D_5Z9ShR.js"
+  ],
+  "resources/js/Components/Editor/Components/Button/BlockButton.tsx": [
+    "/build/assets/ChapterForm-7gLag-KW.js"
+  ],
+  "resources/js/Components/Editor/Components/Button/MarkButton.tsx": [
+    "/build/assets/ChapterForm-7gLag-KW.js"
+  ],
+  "resources/js/Components/Editor/Components/Image/InsertImageButton.tsx": [
+    "/build/assets/ChapterForm-7gLag-KW.js"
+  ],
+  "resources/js/Components/Editor/Components/Image/SlateImage.tsx": [
+    "/build/assets/mark-BCJfS3To.js"
+  ],
+  "resources/js/Components/Editor/Components/Image/withImage.ts": [
+    "/build/assets/ChapterForm-7gLag-KW.js"
+  ],
+  "resources/js/Components/Editor/Components/Render/Element.tsx": [
+    "/build/assets/mark-BCJfS3To.js"
+  ],
+  "resources/js/Components/Editor/Components/Render/Leaf.tsx": [
+    "/build/assets/mark-BCJfS3To.js"
+  ],
+  "resources/js/Components/Editor/Components/SlateResult.tsx": [
+    "/build/assets/Novel-DSQOCQ5W.js"
+  ],
+  "resources/js/Components/Editor/Components/SlateToolbar.tsx": [
+    "/build/assets/ChapterForm-7gLag-KW.js"
+  ],
+  "resources/js/Components/Editor/SlateEditor.tsx": [
+    "/build/assets/ChapterForm-7gLag-KW.js"
+  ],
+  "resources/js/Components/Editor/Utils/fixEditor.ts": [
+    "/build/assets/mark-BCJfS3To.js"
+  ],
+  "resources/js/Components/Editor/Utils/mark.ts": [
+    "/build/assets/mark-BCJfS3To.js"
+  ],
+  "resources/js/Components/Excel/ExcelDataImportButton.tsx": [
+    "/build/assets/Index-4JlaD6P1.js"
+  ],
+  "resources/js/Components/Excel/ExportExcelButton.tsx": [
+    "/build/assets/Index-4JlaD6P1.js"
+  ],
+  "resources/js/Components/Form/FormInput.tsx": [
+    "/build/assets/FormInput-DY6TuaZo.js"
+  ],
+  "resources/js/Components/GoogleAds/AdsenseComponent.tsx": [
+    "/build/assets/About-B0whmpoL.js"
+  ],
+  "resources/js/Components/InputError.tsx": [
+    "/build/assets/TextInput-DQL-42yE.js"
+  ],
+  "resources/js/Components/InputLabel.tsx": [
+    "/build/assets/InputLabel-CaoVq05r.js"
+  ],
+  "resources/js/Components/Modal.tsx": [
+    "/build/assets/DeleteUserForm-D_5Z9ShR.js"
+  ],
+  "resources/js/Components/NavLink.tsx": [
+    "/build/assets/AuthenticatedLayout-CWsw7_3p.js"
+  ],
+  "resources/js/Components/Notification/Hooks/useNotification.ts": [
+    "/build/assets/FooterLayout-DOY91SPS.js"
+  ],
+  "resources/js/Components/Notification/NotificationButton.tsx": [
+    "/build/assets/FooterLayout-DOY91SPS.js"
+  ],
+  "resources/js/Components/Notification/UserNotificationButton.tsx": [
+    "/build/assets/FooterLayout-DOY91SPS.js"
+  ],
+  "resources/js/Components/PrimaryButton.tsx": [
+    "/build/assets/PrimaryButton-C5ts3FGL.js"
+  ],
+  "resources/js/Components/Product/Form/CreateProductForm.tsx": [
+    "/build/assets/Create-CbNinT5C.js"
+  ],
+  "resources/js/Components/Product/Form/EditProductForm.tsx": [
+    "/build/assets/Edit-C8PAPFS6.js"
+  ],
+  "resources/js/Components/Product/ProductCard.tsx": [
+    "/build/assets/ProductList-Oc9RdV73.js"
+  ],
+  "resources/js/Components/Product/ProductList.tsx": [
+    "/build/assets/ProductList-Oc9RdV73.js"
+  ],
+  "resources/js/Components/SEO/SeoHead.tsx": [
+    "/build/assets/SeoHead-BEko9LA3.js"
+  ],
+  "resources/js/Components/Search/CategoryFilter.tsx": [
+    "/build/assets/CategoryFilter-DQ8CAepx.js"
+  ],
+  "resources/js/Components/Search/Hooks/useSearch.ts": [
+    "/build/assets/SearchBar-CO0tNPFY.js"
+  ],
+  "resources/js/Components/Search/SearchBar.tsx": [
+    "/build/assets/SearchBar-CO0tNPFY.js"
+  ],
+  "resources/js/Components/SecondaryButton.tsx": [
+    "/build/assets/DeleteUserForm-D_5Z9ShR.js"
+  ],
+  "resources/js/Components/TextInput.tsx": [
+    "/build/assets/TextInput-DQL-42yE.js"
+  ],
+  "resources/js/Components/Upload/UploadInput.tsx": [
+    "/build/assets/UploadInput-DJ1h9Ebd.js"
+  ],
+  "resources/js/Components/Writer/Hooks/useWriterBook.ts": [
+    "/build/assets/Index-BnHszYwJ.js"
+  ],
+  "resources/js/Components/Writer/Hooks/useWriterByUser.ts": [
+    "/build/assets/Show-DJsHQMG4.js"
+  ],
+  "resources/js/Components/Writer/SearchBookForWriter.tsx": [
+    "/build/assets/Index-BnHszYwJ.js"
+  ],
+  "resources/js/Components/Writer/UserProfileHeader.tsx": [
+    "/build/assets/UserProfileHeader-Xti_Ol_w.js"
+  ],
+  "resources/js/Config/googleAds.ts": [
+    "/build/assets/About-B0whmpoL.js"
+  ],
+  "resources/js/Config/seo.ts": [
+    "/build/assets/seo-B2m5Eufc.js"
+  ],
+  "resources/js/Hooks/User/useUserLIst.ts": [
+    "/build/assets/Index-7zbrUwer.js"
+  ],
+  "resources/js/Hooks/useCart.ts": [
+    "/build/assets/useCart-D3twppGD.js"
+  ],
+  "resources/js/Hooks/useDatabaseMigration.ts": [
+    "/build/assets/Database-Ahd9aI2P.js"
+  ],
+  "resources/js/Hooks/usePermission.ts": [
+    "/build/assets/FooterLayout-DOY91SPS.js"
+  ],
+  "resources/js/Hooks/useUploadFile.ts": [
+    "/build/assets/useUploadFile-Px7fVPI-.js"
+  ],
+  "resources/js/Layouts/AuthenticatedLayout.tsx": [
+    "/build/assets/AuthenticatedLayout-CWsw7_3p.js"
+  ],
+  "resources/js/Layouts/FooterLayout.tsx": [
+    "/build/assets/FooterLayout-DOY91SPS.js"
+  ],
+  "resources/js/Layouts/GuestLayout.tsx": [
+    "/build/assets/GuestLayout-D4uodc1Y.js"
+  ],
+  "resources/js/Layouts/MangaLayout.tsx": [
+    "/build/assets/MangaLayout-BG3ZyHTG.js"
+  ],
+  "resources/js/Mocks/data.ts": [],
+  "resources/js/Pages/About.tsx": [
+    "/build/assets/About-B0whmpoL.js"
+  ],
+  "resources/js/Pages/Admin/Database.tsx": [
+    "/build/assets/Database-Ahd9aI2P.js"
+  ],
+  "resources/js/Pages/Admin/Index.tsx": [
+    "/build/assets/Index-4JlaD6P1.js"
+  ],
+  "resources/js/Pages/Admin/User/Index.tsx": [
+    "/build/assets/Index-7zbrUwer.js"
+  ],
+  "resources/js/Pages/Auth/ConfirmPassword.tsx": [
+    "/build/assets/ConfirmPassword-Ck0ZZS9Q.js"
+  ],
+  "resources/js/Pages/Auth/ForgotPassword.tsx": [
+    "/build/assets/ForgotPassword-BGg07Ua9.js"
+  ],
+  "resources/js/Pages/Auth/Login.tsx": [
+    "/build/assets/Login-DGvGRmb_.js"
+  ],
+  "resources/js/Pages/Auth/OAuthLogin.tsx": [
+    "/build/assets/OAuthLogin-CDKQAz5y.js"
+  ],
+  "resources/js/Pages/Auth/Register.tsx": [
+    "/build/assets/Register-47PNJU0M.js"
+  ],
+  "resources/js/Pages/Auth/ResetPassword.tsx": [
+    "/build/assets/ResetPassword-CvmnzIJM.js"
+  ],
+  "resources/js/Pages/Auth/VerifyEmail.tsx": [
+    "/build/assets/VerifyEmail-hRbRqzL5.js"
+  ],
+  "resources/js/Pages/Book/Create.tsx": [
+    "/build/assets/Create-CIlgSOUq.js"
+  ],
+  "resources/js/Pages/Book/Edit.tsx": [
+    "/build/assets/Edit-BPioScnQ.js"
+  ],
+  "resources/js/Pages/Book/Index.tsx": [
+    "/build/assets/Index-qhaztuBn.js"
+  ],
+  "resources/js/Pages/Book/Show.tsx": [
+    "/build/assets/Show-ghyHdGks.js"
+  ],
+  "resources/js/Pages/Book/Type.tsx": [
+    "/build/assets/Type-50V-z8Ff.js"
+  ],
+  "resources/js/Pages/Cart.tsx": [
+    "/build/assets/Cart-DlLTvFg5.js"
+  ],
+  "resources/js/Pages/Chapter/Create.tsx": [
+    "/build/assets/Create-wfDoPQqf.js"
+  ],
+  "resources/js/Pages/Chapter/Edit.tsx": [
+    "/build/assets/Edit-B8_3xJ1x.js"
+  ],
+  "resources/js/Pages/Chapter/Limit.tsx": [
+    "/build/assets/Limit-C-dpoEd-.js"
+  ],
+  "resources/js/Pages/Chapter/Novel.tsx": [
+    "/build/assets/Novel-DSQOCQ5W.js"
+  ],
+  "resources/js/Pages/Chapter/Show.tsx": [
+    "/build/assets/Show-fEaC6J-H.js"
+  ],
+  "resources/js/Pages/Errors/404.tsx": [
+    "/build/assets/404-CH1T2E8c.js"
+  ],
+  "resources/js/Pages/Library.tsx": [
+    "/build/assets/Library-NqxjCDYm.js"
+  ],
+  "resources/js/Pages/Product/Create.tsx": [
+    "/build/assets/Create-CbNinT5C.js"
+  ],
+  "resources/js/Pages/Product/Edit.tsx": [
+    "/build/assets/Edit-C8PAPFS6.js"
+  ],
+  "resources/js/Pages/Product/Index.tsx": [
+    "/build/assets/Index-bIEdTd-d.js"
+  ],
+  "resources/js/Pages/Product/Show.tsx": [
+    "/build/assets/Show-BktcTSG2.js"
+  ],
+  "resources/js/Pages/Profile/Edit.tsx": [
+    "/build/assets/Edit-y1_5qav4.js"
+  ],
+  "resources/js/Pages/Profile/Partials/DeleteUserForm.tsx": [
+    "/build/assets/DeleteUserForm-D_5Z9ShR.js"
+  ],
+  "resources/js/Pages/Profile/Partials/UpdatePasswordForm.tsx": [
+    "/build/assets/UpdatePasswordForm-BhkgNU-V.js"
+  ],
+  "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.tsx": [
+    "/build/assets/UpdateProfileInformationForm-BsNMzuAO.js"
+  ],
+  "resources/js/Pages/Search.tsx": [
+    "/build/assets/Search-DLjRBn7S.js"
+  ],
+  "resources/js/Pages/Upload/Create.tsx": [
+    "/build/assets/Create-C_ws3Wyc.js"
+  ],
+  "resources/js/Pages/Welcome.tsx": [
+    "/build/assets/Welcome-BM0BxMPX.js"
+  ],
+  "resources/js/Pages/Writer/Complete.tsx": [
+    "/build/assets/Complete-CsIOfbf3.js"
+  ],
+  "resources/js/Pages/Writer/Index.tsx": [
+    "/build/assets/Index-BnHszYwJ.js"
+  ],
+  "resources/js/Pages/Writer/List.tsx": [
+    "/build/assets/List-nV4OK7fm.js"
+  ],
+  "resources/js/Pages/Writer/Register.tsx": [
+    "/build/assets/Register-pmHPOAjB.js"
+  ],
+  "resources/js/Pages/Writer/Show.tsx": [
+    "/build/assets/Show-DJsHQMG4.js"
+  ],
+  "resources/js/Pages/Writer/SubmissionFailed.tsx": [
+    "/build/assets/SubmissionFailed-CbcCiQ6X.js"
+  ],
+  "resources/js/Providers/Provider.tsx": [],
+  "resources/js/Redux/Features/bookFollowingSlice.ts": [],
+  "resources/js/Redux/Features/bookSlice.ts": [],
+  "resources/js/Redux/Features/cartSlice.ts": [],
+  "resources/js/Redux/Features/notificationSlice.ts": [],
+  "resources/js/Redux/Features/productSlice.ts": [],
+  "resources/js/Redux/Features/searchSlice.ts": [],
+  "resources/js/Redux/Features/userSlice.ts": [],
+  "resources/js/Redux/Features/writerSlice.ts": [],
+  "resources/js/Redux/createAppSlice.ts": [],
+  "resources/js/Redux/hooks.ts": [
+    "/build/assets/FooterLayout-DOY91SPS.js"
+  ],
+  "resources/js/Redux/store.ts": [],
+  "resources/js/Utils/dayjs.ts": [
+    "/build/assets/FooterLayout-DOY91SPS.js"
+  ],
+  "resources/js/Utils/getMeta.ts": [
+    "/build/assets/ApplicationLogo-Bn7DjPlp.js"
+  ],
+  "resources/js/Utils/laravelBlade.ts": [
+    "/build/assets/ApplicationLogo-Bn7DjPlp.js"
+  ],
+  "resources/js/ssr.tsx": [],
+  "vendor/tightenco/ziggy/dist/index.js": []
+}
