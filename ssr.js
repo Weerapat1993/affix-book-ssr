@@ -4,7 +4,7 @@ import { createInertiaApp } from "@inertiajs/react";
 import createServer from "@inertiajs/react/server";
 import { useMemo } from "react";
 import { Provider } from "react-redux";
-import { createSlice, buildCreateSlice, asyncThunkCreator, createAsyncThunk, configureStore } from "@reduxjs/toolkit";
+import { buildCreateSlice, asyncThunkCreator, createAsyncThunk, createSlice, configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import axios from "axios";
 import { createCache, extractStyle, StyleProvider } from "@ant-design/cssinjs";
@@ -345,207 +345,6 @@ function T(t4, e2, r2, n2) {
   const o2 = new N(t4, e2, r2, n2);
   return t4 ? o2.toString() : o2;
 }
-const initialState$7 = {
-  loading: false,
-  data: {
-    token: null
-  },
-  error: null
-};
-const product = createSlice({
-  name: "product",
-  initialState: initialState$7,
-  reducers: {
-    init: () => initialState$7
-  }
-});
-product.actions;
-const productReducer = product.reducer;
-const coupons = [
-  {
-    "id": 1,
-    "campaign": "fixed_amount",
-    "campaign_name": "Fixed amount",
-    "category": "Coupon",
-    "code": "FIX50",
-    "discount": 50,
-    "rules": ""
-  },
-  {
-    "id": 2,
-    "campaign": "percentage_discount",
-    "campaign_name": "Percentage discount",
-    "category": "Coupon",
-    "code": "10PERCENT",
-    "discount": 10,
-    "rules": ""
-  },
-  {
-    "id": 3,
-    "campaign": "percentage_discount_by_item_category",
-    "campaign_name": "Percentage discount by item category clothing",
-    "category": "On Top",
-    "code": "15CLOTHING",
-    "discount": 15,
-    "rules": "clothing"
-  },
-  {
-    "id": 4,
-    "campaign": "special_campaigns",
-    "campaign_name": "Special Campaigns",
-    "category": "Seasonal",
-    "code": "SEASONAL300",
-    "discount": 40,
-    "every_price_discount": 300,
-    "rules": ""
-  },
-  {
-    "id": 5,
-    "campaign": "percentage_discount_by_item_category",
-    "campaign_name": "Percentage discount by item category electronics",
-    "category": "On Top",
-    "code": "10ELECTRONIC",
-    "discount": 10,
-    "rules": "electronic"
-  }
-];
-const initialState$6 = {
-  products: [],
-  discount: 0,
-  isCanUse: false,
-  isUsePoint: false,
-  isErrorCoupon: false,
-  code: ""
-};
-const localStorageName = "cart_log";
-const cart = createSlice({
-  name: "cart",
-  initialState: {
-    data: initialState$6,
-    isFetch: false
-  },
-  reducers: {
-    getLocalStorage: (state) => {
-      if (!state.isFetch) {
-        const retrievedObject = localStorage.getItem(localStorageName);
-        if (retrievedObject) {
-          const data = JSON.parse(retrievedObject);
-          state.data = data;
-          state.isFetch = true;
-        }
-      }
-    },
-    addToCart: (state, action) => {
-      const productId = action.payload.id;
-      const isHaveProductInCart = state.data.products.filter((item) => item.product_id === productId).length > 0;
-      if (isHaveProductInCart) {
-        let item = state.data.products.find((i2) => i2.product_id === productId) || {};
-        if (item.qty && item.qty > 0) {
-          item.qty += 1;
-        }
-      } else {
-        state.data.products = [
-          ...state.data.products,
-          {
-            product_id: action.payload.id,
-            name: action.payload.name,
-            qty: 1,
-            price: action.payload.price,
-            category: action.payload.category
-          }
-        ];
-      }
-    },
-    removeCart: (state, action) => {
-      const productId = action.payload;
-      const isHaveProductInCart = state.data.products.filter((item) => item.product_id === productId).length > 0;
-      if (isHaveProductInCart) {
-        state.data.products = state.data.products.filter((item) => item.product_id !== productId);
-      }
-    },
-    usePoint: (state, action) => {
-      const point = action.payload;
-      const allPrice = state.data.products.reduce((pre, cur) => pre + cur.price * cur.qty, 0);
-      const maxPoint = Math.floor(allPrice * 20 / 100);
-      state.data.discount = point > maxPoint ? maxPoint : point;
-      state.data.isCanUse = false;
-      state.data.code = "";
-      state.data.isErrorCoupon = false;
-      state.data.isUsePoint = true;
-      localStorage.setItem(localStorageName, JSON.stringify(state.data));
-    },
-    searchCoupon: (state, action) => {
-      const code = action.payload;
-      const coupon = coupons.find((item) => item.code === code);
-      if (coupon == null ? void 0 : coupon.id) {
-        const allPrice = state.data.products.reduce((pre, cur) => pre + cur.price * cur.qty, 0);
-        let discount = 0;
-        let rule = 0;
-        switch (coupon == null ? void 0 : coupon.campaign) {
-          case "fixed_amount":
-            discount = (coupon == null ? void 0 : coupon.discount) || 0;
-            break;
-          case "percentage_discount":
-            rule = allPrice * (coupon == null ? void 0 : coupon.discount) / 100;
-            discount = rule;
-            break;
-          case "percentage_discount_by_item_category":
-            const ruleType = coupon.rules;
-            const ruleAllPrice = state.data.products.filter((item) => item.category === ruleType).reduce((pre, cur) => pre + cur.price * cur.qty, 0);
-            rule = ruleAllPrice * (coupon == null ? void 0 : coupon.discount) / 100;
-            discount = rule;
-            break;
-          case "special_campaigns":
-            const everyPriceDiscount = (coupon == null ? void 0 : coupon.every_price_discount) || 0;
-            const everyPriceDiscountMultiply = Math.floor(allPrice / everyPriceDiscount);
-            rule = (coupon == null ? void 0 : coupon.discount) * everyPriceDiscountMultiply;
-            discount = rule;
-            break;
-        }
-        if (discount > 0) {
-          state.data.discount = discount;
-          state.data.isCanUse = true;
-          state.data.code = code;
-          state.data.isErrorCoupon = false;
-        } else {
-          state.data.isErrorCoupon = true;
-          state.data.isCanUse = false;
-        }
-      } else {
-        state.data.isErrorCoupon = true;
-        state.data.isCanUse = false;
-      }
-      localStorage.setItem(localStorageName, JSON.stringify(state.data));
-    },
-    clearCoupon: (state) => {
-      state.data.discount = 0;
-      state.data.isCanUse = false;
-      state.data.code = "";
-      state.data.isErrorCoupon = false;
-      state.data.isUsePoint = false;
-      localStorage.setItem(localStorageName, JSON.stringify(state.data));
-    }
-  }
-});
-const {
-  addToCart,
-  removeCart,
-  searchCoupon,
-  clearCoupon,
-  usePoint,
-  getLocalStorage
-} = cart.actions;
-const removeManyCarts = (keys) => async (dispatch) => {
-  keys.forEach((key) => {
-    dispatch(removeCart(key));
-  });
-  dispatch(clearCoupon());
-};
-const addToCartThunk = (productId) => async (dispatch) => {
-  dispatch(addToCart(productId));
-  dispatch(clearCoupon());
-};
-const cartReducer = cart.reducer;
 const createAppSlice = buildCreateSlice({
   creators: { asyncThunk: asyncThunkCreator }
 });
@@ -1115,8 +914,6 @@ const {
 const bookReducer = book.reducer;
 const store = configureStore({
   reducer: {
-    productReducer,
-    cartReducer,
     userReducer,
     bookFollowingReducer,
     notificationReducer,
@@ -1139,7 +936,7 @@ createServer(
     page,
     render: ReactDOMServer.renderToString,
     title: (title) => `${title} - ${appName} | เว็บไซต์อ่านหนังสือออนไลน์`,
-    resolve: (name) => resolvePageComponent(`./Pages/${name}.tsx`, /* @__PURE__ */ Object.assign({ "./Pages/About.tsx": () => import("./assets/About-B0whmpoL.js"), "./Pages/Admin/Database.tsx": () => import("./assets/Database-Ahd9aI2P.js"), "./Pages/Admin/Index.tsx": () => import("./assets/Index-4JlaD6P1.js"), "./Pages/Admin/User/Index.tsx": () => import("./assets/Index-7zbrUwer.js"), "./Pages/Auth/ConfirmPassword.tsx": () => import("./assets/ConfirmPassword-Ck0ZZS9Q.js"), "./Pages/Auth/ForgotPassword.tsx": () => import("./assets/ForgotPassword-BGg07Ua9.js"), "./Pages/Auth/Login.tsx": () => import("./assets/Login-DGvGRmb_.js"), "./Pages/Auth/OAuthLogin.tsx": () => import("./assets/OAuthLogin-CDKQAz5y.js"), "./Pages/Auth/Register.tsx": () => import("./assets/Register-47PNJU0M.js"), "./Pages/Auth/ResetPassword.tsx": () => import("./assets/ResetPassword-CvmnzIJM.js"), "./Pages/Auth/VerifyEmail.tsx": () => import("./assets/VerifyEmail-hRbRqzL5.js"), "./Pages/Book/Create.tsx": () => import("./assets/Create-CIlgSOUq.js"), "./Pages/Book/Edit.tsx": () => import("./assets/Edit-BPioScnQ.js"), "./Pages/Book/Index.tsx": () => import("./assets/Index-qhaztuBn.js"), "./Pages/Book/Show.tsx": () => import("./assets/Show-ghyHdGks.js"), "./Pages/Book/Type.tsx": () => import("./assets/Type-50V-z8Ff.js"), "./Pages/Cart.tsx": () => import("./assets/Cart-DlLTvFg5.js"), "./Pages/Chapter/Create.tsx": () => import("./assets/Create-wfDoPQqf.js"), "./Pages/Chapter/Edit.tsx": () => import("./assets/Edit-B8_3xJ1x.js"), "./Pages/Chapter/Limit.tsx": () => import("./assets/Limit-C-dpoEd-.js"), "./Pages/Chapter/Novel.tsx": () => import("./assets/Novel-DSQOCQ5W.js"), "./Pages/Chapter/Show.tsx": () => import("./assets/Show-fEaC6J-H.js"), "./Pages/Errors/404.tsx": () => import("./assets/404-CH1T2E8c.js"), "./Pages/Library.tsx": () => import("./assets/Library-NqxjCDYm.js"), "./Pages/Product/Create.tsx": () => import("./assets/Create-CbNinT5C.js"), "./Pages/Product/Edit.tsx": () => import("./assets/Edit-C8PAPFS6.js"), "./Pages/Product/Index.tsx": () => import("./assets/Index-bIEdTd-d.js"), "./Pages/Product/Show.tsx": () => import("./assets/Show-BktcTSG2.js"), "./Pages/Profile/Edit.tsx": () => import("./assets/Edit-y1_5qav4.js"), "./Pages/Profile/Partials/DeleteUserForm.tsx": () => import("./assets/DeleteUserForm-D_5Z9ShR.js"), "./Pages/Profile/Partials/UpdatePasswordForm.tsx": () => import("./assets/UpdatePasswordForm-BhkgNU-V.js"), "./Pages/Profile/Partials/UpdateProfileInformationForm.tsx": () => import("./assets/UpdateProfileInformationForm-BsNMzuAO.js"), "./Pages/Search.tsx": () => import("./assets/Search-DLjRBn7S.js"), "./Pages/Upload/Create.tsx": () => import("./assets/Create-C_ws3Wyc.js"), "./Pages/Welcome.tsx": () => import("./assets/Welcome-BM0BxMPX.js"), "./Pages/Writer/Complete.tsx": () => import("./assets/Complete-CsIOfbf3.js"), "./Pages/Writer/Index.tsx": () => import("./assets/Index-BnHszYwJ.js"), "./Pages/Writer/List.tsx": () => import("./assets/List-nV4OK7fm.js"), "./Pages/Writer/Register.tsx": () => import("./assets/Register-pmHPOAjB.js"), "./Pages/Writer/Show.tsx": () => import("./assets/Show-DJsHQMG4.js"), "./Pages/Writer/SubmissionFailed.tsx": () => import("./assets/SubmissionFailed-CbcCiQ6X.js") })),
+    resolve: (name) => resolvePageComponent(`./Pages/${name}.tsx`, /* @__PURE__ */ Object.assign({ "./Pages/About.tsx": () => import("./assets/About-CPwthrzC.js"), "./Pages/Admin/Database.tsx": () => import("./assets/Database-DXCLFTE3.js"), "./Pages/Admin/Index.tsx": () => import("./assets/Index-CrfvjQFy.js"), "./Pages/Admin/User/Index.tsx": () => import("./assets/Index-BbrvxS1i.js"), "./Pages/Auth/ConfirmPassword.tsx": () => import("./assets/ConfirmPassword-Ck0ZZS9Q.js"), "./Pages/Auth/ForgotPassword.tsx": () => import("./assets/ForgotPassword-BGg07Ua9.js"), "./Pages/Auth/Login.tsx": () => import("./assets/Login-DGvGRmb_.js"), "./Pages/Auth/OAuthLogin.tsx": () => import("./assets/OAuthLogin-CDKQAz5y.js"), "./Pages/Auth/Register.tsx": () => import("./assets/Register-47PNJU0M.js"), "./Pages/Auth/ResetPassword.tsx": () => import("./assets/ResetPassword-CvmnzIJM.js"), "./Pages/Auth/VerifyEmail.tsx": () => import("./assets/VerifyEmail-hRbRqzL5.js"), "./Pages/Book/Create.tsx": () => import("./assets/Create-CqI9AEgD.js"), "./Pages/Book/Edit.tsx": () => import("./assets/Edit-CxGFcKyE.js"), "./Pages/Book/Index.tsx": () => import("./assets/Index-CmJtFp4N.js"), "./Pages/Book/Show.tsx": () => import("./assets/Show-CN5buK3f.js"), "./Pages/Book/Type.tsx": () => import("./assets/Type-CPAHaEkc.js"), "./Pages/Chapter/Create.tsx": () => import("./assets/Create-D2zC7_H2.js"), "./Pages/Chapter/Edit.tsx": () => import("./assets/Edit-Ku6H9fMV.js"), "./Pages/Chapter/Limit.tsx": () => import("./assets/Limit-M3SDPXvM.js"), "./Pages/Chapter/Novel.tsx": () => import("./assets/Novel-L2Y1t5Uh.js"), "./Pages/Chapter/Show.tsx": () => import("./assets/Show-Dke6cgTx.js"), "./Pages/Errors/404.tsx": () => import("./assets/404-CH1T2E8c.js"), "./Pages/Library.tsx": () => import("./assets/Library-BvPtObqI.js"), "./Pages/Profile/Edit.tsx": () => import("./assets/Edit-D8zZ408O.js"), "./Pages/Profile/Partials/DeleteUserForm.tsx": () => import("./assets/DeleteUserForm-D_5Z9ShR.js"), "./Pages/Profile/Partials/UpdatePasswordForm.tsx": () => import("./assets/UpdatePasswordForm-BhkgNU-V.js"), "./Pages/Profile/Partials/UpdateProfileInformationForm.tsx": () => import("./assets/UpdateProfileInformationForm-BsNMzuAO.js"), "./Pages/Search.tsx": () => import("./assets/Search-Bu_OwjdT.js"), "./Pages/Upload/Create.tsx": () => import("./assets/Create-BXaM1GrC.js"), "./Pages/Welcome.tsx": () => import("./assets/Welcome-CzhZVWbN.js"), "./Pages/Writer/Complete.tsx": () => import("./assets/Complete-CRKzWKjq.js"), "./Pages/Writer/Index.tsx": () => import("./assets/Index-cPfPq6wO.js"), "./Pages/Writer/List.tsx": () => import("./assets/List-CG4oko7z.js"), "./Pages/Writer/Register.tsx": () => import("./assets/Register-DoHxBkXg.js"), "./Pages/Writer/Show.tsx": () => import("./assets/Show-DR-U8vPk.js"), "./Pages/Writer/SubmissionFailed.tsx": () => import("./assets/SubmissionFailed-IWfEosQN.js") })),
     setup: ({ App: App2, props }) => {
       global.route = (name, params, absolute) => T(name, params, absolute, {
         // @ts-expect-error
@@ -1155,24 +952,18 @@ export {
   getBookListByType as a,
   setPage as b,
   clearPages as c,
-  addToCartThunk as d,
-  searchCoupon as e,
-  clearCoupon as f,
+  getBookFollowing as d,
+  clickFollowing as e,
+  getSearch as f,
   getUserList as g,
-  getLocalStorage as h,
-  getNotificationList as i,
-  getBookFollowing as j,
-  clickFollowing as k,
-  getSearch as l,
-  setFlash as m,
-  setFilterTitle as n,
-  setPage$1 as o,
-  clearPages$1 as p,
-  getWriterBookList as q,
-  removeManyCarts as r,
-  setFilterCategory as s,
-  createDefaultDataByUserId as t,
-  usePoint as u,
-  setPageByUserId as v,
-  getWriterBookListPublic as w
+  getNotificationList as h,
+  setFlash as i,
+  setFilterTitle as j,
+  setPage$1 as k,
+  clearPages$1 as l,
+  getWriterBookList as m,
+  createDefaultDataByUserId as n,
+  setPageByUserId as o,
+  getWriterBookListPublic as p,
+  setFilterCategory as s
 };
