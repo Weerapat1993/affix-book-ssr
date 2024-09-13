@@ -6,10 +6,11 @@ import { r as randomInArray } from "./math-rflY_aJU.js";
 import axios from "axios";
 import { useState, useEffect } from "react";
 const BannerDisplay = ({ banner }) => {
+  const imgUrl = (banner.img_url || "").includes("http") ? banner.img_url : asset(`storage/${banner.img_url}`);
   return /* @__PURE__ */ jsx("div", { className: "card overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-lg", children: /* @__PURE__ */ jsx(AspectRatio, { ratio: 1 / 1, children: /* @__PURE__ */ jsx("a", { href: banner.target_link_url, target: "_blank", rel: "noopener noreferrer", children: /* @__PURE__ */ jsx(
     Image,
     {
-      src: asset(banner.img_url),
+      src: imgUrl,
       alt: banner.title,
       className: "object-cover w-full h-full"
     }

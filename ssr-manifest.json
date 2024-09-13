@@ -49,10 +49,10 @@
     "/build/assets/BookHeader-BLlM2o2M.js"
   ],
   "resources/js/Components/Book/LatestBookCard.tsx": [
-    "/build/assets/Welcome-MhsH793l.js"
+    "/build/assets/Welcome-BvL0jI_x.js"
   ],
   "resources/js/Components/Book/LatestBookList.tsx": [
-    "/build/assets/Welcome-MhsH793l.js"
+    "/build/assets/Welcome-BvL0jI_x.js"
   ],
   "resources/js/Components/Book/SuggestBookCarousel.tsx": [
     "/build/assets/Index-zysdMhqS.js"
@@ -217,16 +217,16 @@
     "/build/assets/UserProfileHeader-DBdxrB1S.js"
   ],
   "resources/js/Components/banner/BannerAdvertising.tsx": [
-    "/build/assets/BannerAdvertising-kxuzmPom.js"
+    "/build/assets/BannerAdvertising-C4EVEZbP.js"
   ],
   "resources/js/Components/banner/BannerDisplay.tsx": [
-    "/build/assets/BannerAdvertising-kxuzmPom.js"
+    "/build/assets/BannerAdvertising-C4EVEZbP.js"
   ],
   "resources/js/Components/banner/BannerList.tsx": [
-    "/build/assets/BannerAdvertising-kxuzmPom.js"
+    "/build/assets/BannerAdvertising-C4EVEZbP.js"
   ],
   "resources/js/Components/banner/hooks/useBannerList.tsx": [
-    "/build/assets/BannerAdvertising-kxuzmPom.js"
+    "/build/assets/BannerAdvertising-C4EVEZbP.js"
   ],
   "resources/js/Components/breadcrumb/LayoutBreadcrumb.tsx": [
     "/build/assets/AuthenticatedLayout-CGi1hEqW.js"
@@ -331,7 +331,7 @@
     "/build/assets/MangaLayout-DWEC3cQI.js"
   ],
   "resources/js/Pages/About.tsx": [
-    "/build/assets/About-DlWcaS6J.js"
+    "/build/assets/About-CGjabbvS.js"
   ],
   "resources/js/Pages/Admin/Database.tsx": [
     "/build/assets/Database-CYaSybf0.js"
@@ -424,13 +424,13 @@
     "/build/assets/UpdateProfileInformationForm-BsNMzuAO.js"
   ],
   "resources/js/Pages/Search.tsx": [
-    "/build/assets/Search-CajgGfCH.js"
+    "/build/assets/Search-BGd4C-5N.js"
   ],
   "resources/js/Pages/Upload/Create.tsx": [
     "/build/assets/Create-BmjPbB4L.js"
   ],
   "resources/js/Pages/Welcome.tsx": [
-    "/build/assets/Welcome-MhsH793l.js"
+    "/build/assets/Welcome-BvL0jI_x.js"
   ],
   "resources/js/Pages/Writer/Complete.tsx": [
     "/build/assets/Complete-DatjmJ1j.js"

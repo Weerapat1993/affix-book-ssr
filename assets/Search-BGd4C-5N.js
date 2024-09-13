@@ -4,7 +4,7 @@ import { Head } from "@inertiajs/react";
 import { u as useSearch, S as SearchBar } from "./SearchBar-Bsy7SkUe.js";
 import { B as BookList } from "./BookList-BB3lA080.js";
 import { Empty, Spin, Card, Typography } from "antd";
-import { B as BannerAdvertising } from "./BannerAdvertising-kxuzmPom.js";
+import { B as BannerAdvertising } from "./BannerAdvertising-C4EVEZbP.js";
 import "react";
 import "./ApplicationLogo-C5KpUhqt.js";
 import "./FooterLayout-DpFvbPph.js";

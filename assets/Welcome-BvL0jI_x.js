@@ -7,7 +7,7 @@ import { d as dateHuman } from "./FooterLayout-DpFvbPph.js";
 import { S as SearchBar } from "./SearchBar-Bsy7SkUe.js";
 import { S as SeoHead } from "./SeoHead-DCf019qq.js";
 import { d as defaultMeta } from "./seo-B2m5Eufc.js";
-import { B as BannerAdvertising } from "./BannerAdvertising-kxuzmPom.js";
+import { B as BannerAdvertising } from "./BannerAdvertising-C4EVEZbP.js";
 import "react";
 import "@ant-design/icons";
 import "@radix-ui/react-toast";

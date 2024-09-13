@@ -1,5 +1,5 @@
 import { jsxs, jsx } from "react/jsx-runtime";
-import { B as BannerAdvertising } from "./BannerAdvertising-kxuzmPom.js";
+import { B as BannerAdvertising } from "./BannerAdvertising-C4EVEZbP.js";
 import { C as Card } from "./Card-Dj6_F9pc.js";
 import { S as SeoHead } from "./SeoHead-DCf019qq.js";
 import { d as defaultMeta } from "./seo-B2m5Eufc.js";
