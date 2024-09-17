@@ -348,7 +348,7 @@ function T(t4, e2, r2, n2) {
 const createAppSlice = buildCreateSlice({
   creators: { asyncThunk: asyncThunkCreator }
 });
-const initialState$6 = {
+const initialState$7 = {
   isFetch: false,
   isLoading: false,
   list: [],
@@ -356,7 +356,7 @@ const initialState$6 = {
 };
 const user$1 = createAppSlice({
   name: "user",
-  initialState: initialState$6,
+  initialState: initialState$7,
   reducers: (create) => ({
     initializeUser: create.reducer((state) => {
     }),
@@ -404,7 +404,7 @@ const {
   getUserList
 } = user$1.actions;
 const userReducer = user$1.reducer;
-const initialState$5 = {
+const initialState$6 = {
   keys: {}
 };
 const getBookFollowing = createAsyncThunk("getBookFollowing", async (params) => {
@@ -434,7 +434,7 @@ const clickFollowing = createAsyncThunk("clickFollowing", async (params) => {
 });
 const bookFollowing = createSlice({
   name: "bookFollowing",
-  initialState: initialState$5,
+  initialState: initialState$6,
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getBookFollowing.pending, (state, action) => {
@@ -530,7 +530,7 @@ const bookFollowing = createSlice({
   }
 });
 const bookFollowingReducer = bookFollowing.reducer;
-const initialState$4 = {
+const initialState$5 = {
   isFetch: false,
   isLoading: false,
   list: [],
@@ -538,7 +538,7 @@ const initialState$4 = {
 };
 const user = createAppSlice({
   name: "notification",
-  initialState: initialState$4,
+  initialState: initialState$5,
   reducers: (create) => ({
     initializeUser: create.reducer((state) => {
     }),
@@ -586,7 +586,7 @@ const {
   getNotificationList
 } = user.actions;
 const notificationReducer = user.reducer;
-const initialState$3 = {
+const initialState$4 = {
   isFetch: false,
   isLoading: false,
   data: null,
@@ -594,7 +594,7 @@ const initialState$3 = {
 };
 const search = createAppSlice({
   name: "notification",
-  initialState: initialState$3,
+  initialState: initialState$4,
   reducers: (create) => ({
     initializeUser: create.reducer((state) => {
     }),
@@ -642,7 +642,7 @@ const {
   getSearch
 } = search.actions;
 const searchReducer = search.reducer;
-const defaultReduxData$2 = {
+const defaultReduxData$3 = {
   isFetch: false,
   isLoading: false,
   isFlash: false,
@@ -660,7 +660,7 @@ const defaultReduxData$2 = {
     lastPage: 1
   }
 };
-const initialState$2 = defaultReduxData$2;
+const initialState$3 = defaultReduxData$3;
 const getWriterBookList = createAsyncThunk("getWriterBookList", async (params) => {
   try {
     const res = await axios({
@@ -689,7 +689,7 @@ const getWriterBookListPublic = createAsyncThunk("getWriterBookListPublic", asyn
 });
 const writer = createSlice({
   name: "writer",
-  initialState: initialState$2,
+  initialState: initialState$3,
   reducers: {
     resetFetch: (state, action) => {
       state.isFetch = false;
@@ -713,20 +713,20 @@ const writer = createSlice({
     createDefaultDataByUserId: (state, action) => {
       const { userId } = action.payload;
       if (!state.keys[userId]) {
-        state.keys[userId] = defaultReduxData$2;
+        state.keys[userId] = defaultReduxData$3;
       }
     },
     setPageByUserId: (state, action) => {
       const { page, userId } = action.payload;
       if (!state.keys[userId]) {
-        state.keys[userId] = defaultReduxData$2;
+        state.keys[userId] = defaultReduxData$3;
       }
       state.keys[userId].pagination.page = page;
     },
     clearPagesByUserId: (state, action) => {
       const { page, userId } = action.payload;
       if (!state.keys[userId]) {
-        state.keys[userId] = defaultReduxData$2;
+        state.keys[userId] = defaultReduxData$3;
       }
       state.keys[userId].pagination.page = page;
       state.keys[userId].pages = {};
@@ -758,7 +758,7 @@ const writer = createSlice({
     builder.addCase(getWriterBookListPublic.pending, (state, action) => {
       const { userId } = action.meta.arg;
       if (!state.keys[userId]) {
-        state.keys[userId] = defaultReduxData$2;
+        state.keys[userId] = defaultReduxData$3;
       }
       state.keys[userId].isLoading = true;
       state.keys[userId].error = null;
@@ -767,7 +767,7 @@ const writer = createSlice({
       const { title, page, userId } = action.meta.arg;
       const { data } = action.payload;
       if (!state.keys[userId]) {
-        state.keys[userId] = defaultReduxData$2;
+        state.keys[userId] = defaultReduxData$3;
       }
       state.keys[userId].isFetch = true;
       state.keys[userId].isLoading = false;
@@ -782,7 +782,7 @@ const writer = createSlice({
     builder.addCase(getWriterBookListPublic.rejected, (state, action) => {
       const { userId } = action.meta.arg;
       if (!state.keys[userId]) {
-        state.keys[userId] = defaultReduxData$2;
+        state.keys[userId] = defaultReduxData$3;
       }
       state.keys[userId].isFetch = false;
       state.keys[userId].isLoading = false;
@@ -801,7 +801,7 @@ const {
   createDefaultDataByUserId
 } = writer.actions;
 const writerReducer = writer.reducer;
-const defaultReduxData$1 = {
+const defaultReduxData$2 = {
   isFetch: false,
   isLoading: false,
   error: null,
@@ -817,12 +817,12 @@ const defaultReduxData$1 = {
     lastPage: 1
   }
 };
-const initialState$1 = {
+const initialState$2 = {
   keys: {
-    Manga: defaultReduxData$1,
-    Novel: defaultReduxData$1,
-    Comic: defaultReduxData$1,
-    Oneshot: defaultReduxData$1
+    Manga: defaultReduxData$2,
+    Novel: defaultReduxData$2,
+    Comic: defaultReduxData$2,
+    Oneshot: defaultReduxData$2
   }
 };
 const getBookListByType = createAsyncThunk("getBookListByType", async (params) => {
@@ -840,7 +840,7 @@ const getBookListByType = createAsyncThunk("getBookListByType", async (params) =
 });
 const book = createSlice({
   name: "book",
-  initialState: initialState$1,
+  initialState: initialState$2,
   reducers: {
     resetFetch: (state, action) => {
       const { key } = action.payload;
@@ -849,21 +849,21 @@ const book = createSlice({
     setFilterCategory: (state, action) => {
       const { key, categoryIds } = action.payload;
       if (!state.keys[key]) {
-        state.keys[key] = defaultReduxData$1;
+        state.keys[key] = defaultReduxData$2;
       }
       state.keys[key].filters.categoryIds = categoryIds || [];
     },
     setPage: (state, action) => {
       const { key, page } = action.payload;
       if (!state.keys[key]) {
-        state.keys[key] = defaultReduxData$1;
+        state.keys[key] = defaultReduxData$2;
       }
       state.keys[key].pagination.page = page;
     },
     clearPages: (state, action) => {
       const { key, page } = action.payload;
       if (!state.keys[key]) {
-        state.keys[key] = defaultReduxData$1;
+        state.keys[key] = defaultReduxData$2;
       }
       state.keys[key].pagination.page = page;
       state.keys[key].pages = {};
@@ -873,7 +873,7 @@ const book = createSlice({
     builder.addCase(getBookListByType.pending, (state, action) => {
       const { key } = action.meta.arg;
       if (!state.keys[key]) {
-        state.keys[key] = defaultReduxData$1;
+        state.keys[key] = defaultReduxData$2;
       }
       state.keys[key].isLoading = true;
       state.keys[key].error = null;
@@ -882,7 +882,7 @@ const book = createSlice({
       const { key, categoryIds, page } = action.meta.arg;
       const { data } = action.payload;
       if (!state.keys[key]) {
-        state.keys[key] = defaultReduxData$1;
+        state.keys[key] = defaultReduxData$2;
       }
       state.keys[key].isFetch = true;
       state.keys[key].isLoading = false;
@@ -897,7 +897,7 @@ const book = createSlice({
     builder.addCase(getBookListByType.rejected, (state, action) => {
       const { key } = action.meta.arg;
       if (!state.keys[key]) {
-        state.keys[key] = defaultReduxData$1;
+        state.keys[key] = defaultReduxData$2;
       }
       state.keys[key].isFetch = false;
       state.keys[key].isLoading = false;
@@ -912,17 +912,17 @@ const {
   clearPages
 } = book.actions;
 const bookReducer = book.reducer;
-const defaultReduxData = {
+const defaultReduxData$1 = {
   isFetch: false,
   isLoading: false,
   error: null,
   keys: {},
   listIds: []
 };
-const initialState = defaultReduxData;
+const initialState$1 = defaultReduxData$1;
 const product = createSlice({
   name: "product",
-  initialState,
+  initialState: initialState$1,
   reducers: {
     getProductList: (state, action) => {
       const products = action.payload || [];
@@ -946,6 +946,40 @@ const product = createSlice({
 });
 const { getProductList, updateProductById, removeProductById } = product.actions;
 const productReducer = product.reducer;
+const defaultReduxData = {
+  isFetch: false,
+  isLoading: false,
+  error: null,
+  keys: {},
+  listIds: []
+};
+const initialState = defaultReduxData;
+const banner = createSlice({
+  name: "banner",
+  initialState,
+  reducers: {
+    getBannerList: (state, action) => {
+      const banners = action.payload || [];
+      let keys = {};
+      banners.forEach((banner2) => {
+        keys[banner2.id] = banner2;
+      });
+      state.keys = keys;
+      state.listIds = banners.map((banner2) => banner2.id);
+    },
+    updateBannerById: (state, action) => {
+      const banner2 = action.payload;
+      state.keys[banner2.id] = banner2;
+    },
+    removeBannerById: (state, action) => {
+      const id = action.payload;
+      delete state.keys[id];
+      state.listIds = state.listIds.filter((key) => key !== id);
+    }
+  }
+});
+const { getBannerList, updateBannerById, removeBannerById } = banner.actions;
+const bannerReducer = banner.reducer;
 const store = configureStore({
   reducer: {
     userReducer,
@@ -954,7 +988,8 @@ const store = configureStore({
     searchReducer,
     writerReducer,
     bookReducer,
-    productReducer
+    productReducer,
+    bannerReducer
   },
   devTools: process.env.NODE_ENV !== "production",
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({}).concat([])
@@ -971,7 +1006,7 @@ createServer(
     page,
     render: ReactDOMServer.renderToString,
     title: (title) => `${title} - ${appName} | เว็บไซต์อ่านหนังสือออนไลน์`,
-    resolve: (name) => resolvePageComponent(`./Pages/${name}.tsx`, /* @__PURE__ */ Object.assign({ "./Pages/About.tsx": () => import("./assets/About-CGjabbvS.js"), "./Pages/Admin/Database.tsx": () => import("./assets/Database-CYaSybf0.js"), "./Pages/Admin/Index.tsx": () => import("./assets/Index-BPyx7N5P.js"), "./Pages/Admin/User/Index.tsx": () => import("./assets/Index-C4J07L7A.js"), "./Pages/Auth/ConfirmPassword.tsx": () => import("./assets/ConfirmPassword-C-1JAjGk.js"), "./Pages/Auth/ForgotPassword.tsx": () => import("./assets/ForgotPassword-CG75ChGq.js"), "./Pages/Auth/Login.tsx": () => import("./assets/Login-Dfu7JmAq.js"), "./Pages/Auth/OAuthLogin.tsx": () => import("./assets/OAuthLogin-Briae0kw.js"), "./Pages/Auth/Register.tsx": () => import("./assets/Register-CM8kkF8m.js"), "./Pages/Auth/ResetPassword.tsx": () => import("./assets/ResetPassword-gCBp3iZA.js"), "./Pages/Auth/VerifyEmail.tsx": () => import("./assets/VerifyEmail-Cin2RsYO.js"), "./Pages/Book/Create.tsx": () => import("./assets/Create-1sJ3zk1p.js"), "./Pages/Book/Edit.tsx": () => import("./assets/Edit-BmGlRJ7-.js"), "./Pages/Book/Index.tsx": () => import("./assets/Index-zysdMhqS.js"), "./Pages/Book/Show.tsx": () => import("./assets/Show-FWQdTV4k.js"), "./Pages/Book/Type.tsx": () => import("./assets/Type-BNJXQ9Kg.js"), "./Pages/Chapter/Create.tsx": () => import("./assets/Create-DDjM9-Iq.js"), "./Pages/Chapter/Edit.tsx": () => import("./assets/Edit-BSD-xeDq.js"), "./Pages/Chapter/Limit.tsx": () => import("./assets/Limit-B4wnda7X.js"), "./Pages/Chapter/Novel.tsx": () => import("./assets/Novel-D4CLG9iE.js"), "./Pages/Chapter/Show.tsx": () => import("./assets/Show-BHCcRITr.js"), "./Pages/Errors/404.tsx": () => import("./assets/404-Cmmr_bx1.js"), "./Pages/Library.tsx": () => import("./assets/Library-BgF6-YsY.js"), "./Pages/Product/Create.tsx": () => import("./assets/Create-CVz20XD1.js"), "./Pages/Product/Edit.tsx": () => import("./assets/Edit-CycZyS8z.js"), "./Pages/Product/Index.tsx": () => import("./assets/Index-D578eaSD.js"), "./Pages/Product/Show.tsx": () => import("./assets/Show-D6Q20xPN.js"), "./Pages/Profile/Edit.tsx": () => import("./assets/Edit-C6jiCtUG.js"), "./Pages/Profile/Partials/DeleteUserForm.tsx": () => import("./assets/DeleteUserForm-D_5Z9ShR.js"), "./Pages/Profile/Partials/UpdatePasswordForm.tsx": () => import("./assets/UpdatePasswordForm-BhkgNU-V.js"), "./Pages/Profile/Partials/UpdateProfileInformationForm.tsx": () => import("./assets/UpdateProfileInformationForm-BsNMzuAO.js"), "./Pages/Search.tsx": () => import("./assets/Search-BGd4C-5N.js"), "./Pages/Upload/Create.tsx": () => import("./assets/Create-BmjPbB4L.js"), "./Pages/Welcome.tsx": () => import("./assets/Welcome-BvL0jI_x.js"), "./Pages/Writer/Complete.tsx": () => import("./assets/Complete-DatjmJ1j.js"), "./Pages/Writer/Index.tsx": () => import("./assets/Index-Cb1X3dyx.js"), "./Pages/Writer/List.tsx": () => import("./assets/List-C1O0jyr-.js"), "./Pages/Writer/Register.tsx": () => import("./assets/Register-TXvqusHP.js"), "./Pages/Writer/Show.tsx": () => import("./assets/Show-DefFR1s0.js"), "./Pages/Writer/SubmissionFailed.tsx": () => import("./assets/SubmissionFailed-BEaXeIM_.js") })),
+    resolve: (name) => resolvePageComponent(`./Pages/${name}.tsx`, /* @__PURE__ */ Object.assign({ "./Pages/About.tsx": () => import("./assets/About-CENd1b5O.js"), "./Pages/Admin/Database.tsx": () => import("./assets/Database-BS0lPVFF.js"), "./Pages/Admin/Index.tsx": () => import("./assets/Index-BaZvjumA.js"), "./Pages/Admin/User/Index.tsx": () => import("./assets/Index-CRwxswqI.js"), "./Pages/Auth/ConfirmPassword.tsx": () => import("./assets/ConfirmPassword-7ucw1HHH.js"), "./Pages/Auth/ForgotPassword.tsx": () => import("./assets/ForgotPassword-BC0QNNFc.js"), "./Pages/Auth/Login.tsx": () => import("./assets/Login-CvMfJ4mz.js"), "./Pages/Auth/OAuthLogin.tsx": () => import("./assets/OAuthLogin-swVNJBWx.js"), "./Pages/Auth/Register.tsx": () => import("./assets/Register-C3DQVbFn.js"), "./Pages/Auth/ResetPassword.tsx": () => import("./assets/ResetPassword-BdYeIGUP.js"), "./Pages/Auth/VerifyEmail.tsx": () => import("./assets/VerifyEmail-C6PgN9Tu.js"), "./Pages/Banner/Index.tsx": () => import("./assets/Index-xreQ4MVs.js"), "./Pages/Book/Create.tsx": () => import("./assets/Create-CdKJqjPU.js"), "./Pages/Book/Edit.tsx": () => import("./assets/Edit-C-bLBgEF.js"), "./Pages/Book/Index.tsx": () => import("./assets/Index-BIVbpYnD.js"), "./Pages/Book/Show.tsx": () => import("./assets/Show-qMGXEWmX.js"), "./Pages/Book/Type.tsx": () => import("./assets/Type-DW_RtLR1.js"), "./Pages/Chapter/Create.tsx": () => import("./assets/Create-CA_wx9XZ.js"), "./Pages/Chapter/Edit.tsx": () => import("./assets/Edit-ClR4sREM.js"), "./Pages/Chapter/Limit.tsx": () => import("./assets/Limit-ClEhJNLQ.js"), "./Pages/Chapter/Novel.tsx": () => import("./assets/Novel-BX-D5RrS.js"), "./Pages/Chapter/Show.tsx": () => import("./assets/Show-CGPDTW6G.js"), "./Pages/Errors/404.tsx": () => import("./assets/404-DFsOV-9U.js"), "./Pages/Home.tsx": () => import("./assets/Home-CHs9U1IZ.js"), "./Pages/Library.tsx": () => import("./assets/Library-CVfebdOQ.js"), "./Pages/Product/Create.tsx": () => import("./assets/Create-LTAbMhao.js"), "./Pages/Product/Edit.tsx": () => import("./assets/Edit-C_uxfds5.js"), "./Pages/Product/Index.tsx": () => import("./assets/Index-B0vpEBNu.js"), "./Pages/Product/Show.tsx": () => import("./assets/Show-CbGqtnsw.js"), "./Pages/Profile/Edit.tsx": () => import("./assets/Edit-DeJNXdaL.js"), "./Pages/Profile/Partials/DeleteUserForm.tsx": () => import("./assets/DeleteUserForm-D_5Z9ShR.js"), "./Pages/Profile/Partials/UpdatePasswordForm.tsx": () => import("./assets/UpdatePasswordForm-BhkgNU-V.js"), "./Pages/Profile/Partials/UpdateProfileInformationForm.tsx": () => import("./assets/UpdateProfileInformationForm-BsNMzuAO.js"), "./Pages/Search.tsx": () => import("./assets/Search-DhaD335u.js"), "./Pages/Upload/Create.tsx": () => import("./assets/Create-DTAfv-Ta.js"), "./Pages/Welcome.tsx": () => import("./assets/Welcome-B-HyL_3o.js"), "./Pages/Writer/Complete.tsx": () => import("./assets/Complete-DOyqQ76H.js"), "./Pages/Writer/Index.tsx": () => import("./assets/Index-DLn2yIQ7.js"), "./Pages/Writer/List.tsx": () => import("./assets/List-08RoqdKw.js"), "./Pages/Writer/Register.tsx": () => import("./assets/Register-zD9UjsfZ.js"), "./Pages/Writer/Show.tsx": () => import("./assets/Show-DsiqIoFd.js"), "./Pages/Writer/SubmissionFailed.tsx": () => import("./assets/SubmissionFailed-DaJTMWR-.js") })),
     setup: ({ App: App2, props }) => {
       global.route = (name, params, absolute) => T(name, params, absolute, {
         // @ts-expect-error
@@ -984,24 +1019,27 @@ createServer(
   })
 );
 export {
-  getBookFollowing as a,
-  getBookListByType as b,
+  getBannerList as a,
+  getBookFollowing as b,
   clickFollowing as c,
-  setPage as d,
-  clearPages as e,
-  getProductList as f,
+  getBookListByType as d,
+  setPage as e,
+  clearPages as f,
   getUserList as g,
-  getNotificationList as h,
-  getSearch as i,
-  setFlash as j,
-  setFilterTitle as k,
-  setPage$1 as l,
-  clearPages$1 as m,
-  getWriterBookList as n,
-  createDefaultDataByUserId as o,
-  setPageByUserId as p,
-  getWriterBookListPublic as q,
-  removeProductById as r,
+  getProductList as h,
+  updateProductById as i,
+  removeProductById as j,
+  getNotificationList as k,
+  getSearch as l,
+  setFlash as m,
+  setFilterTitle as n,
+  setPage$1 as o,
+  clearPages$1 as p,
+  getWriterBookList as q,
+  removeBannerById as r,
   setFilterCategory as s,
-  updateProductById as u
+  createDefaultDataByUserId as t,
+  updateBannerById as u,
+  setPageByUserId as v,
+  getWriterBookListPublic as w
 };
