@@ -4,7 +4,7 @@ import { Carousel, Card, FloatButton, Typography } from "antd";
 import { B as BookList } from "./BookList-ZKp8cxz0.js";
 import { u as usePermission } from "./FooterLayout-BaEYPs1Z.js";
 import { Link } from "@inertiajs/react";
-import { B as BookHeader } from "./BookHeader-Ch4YBplW.js";
+import { B as BookHeader } from "./BookHeader-UgmVhSjo.js";
 import { I as InertiaPagination } from "./InertiaPagiantion-BG9nMLzx.js";
 import { d as defaultMeta } from "./seo-B2m5Eufc.js";
 import { S as SeoHead } from "./SeoHead-DmWXeTpm.js";

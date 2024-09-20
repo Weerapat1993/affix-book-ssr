@@ -2,7 +2,7 @@ import { jsx, jsxs } from "react/jsx-runtime";
 import { A as Authenticated } from "./AuthenticatedLayout-B4iinvfv.js";
 import { Link } from "@inertiajs/react";
 import { List, Avatar, Card, Button, FloatButton, Typography } from "antd";
-import { B as BookHeader } from "./BookHeader-Ch4YBplW.js";
+import { B as BookHeader } from "./BookHeader-UgmVhSjo.js";
 import { d as dateHuman, u as usePermission } from "./FooterLayout-BaEYPs1Z.js";
 import { a as asset } from "./laravelBlade-DwBdVrdx.js";
 import { UserOutlined, PlusOutlined } from "@ant-design/icons";

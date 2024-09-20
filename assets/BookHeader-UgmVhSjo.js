@@ -2,7 +2,7 @@ import { jsx, jsxs } from "react/jsx-runtime";
 import { FacebookShare, TwitterShare } from "react-share-kit";
 import { useEffect, useState } from "react";
 import { a as asset, d as defaultBookCoverUrl } from "./laravelBlade-DwBdVrdx.js";
-import { Button, Tag, Row, Col, Image, Flex, Descriptions, Space, Typography, Modal } from "antd";
+import { Button, Flex, Tag, Row, Col, Image, Descriptions, Space, Typography, Modal } from "antd";
 import { useForm, Link } from "@inertiajs/react";
 import { HeartFilled, HeartOutlined, EditOutlined, DeleteOutlined, ExclamationCircleFilled } from "@ant-design/icons";
 import { b as getBookFollowing, c as clickFollowing } from "../ssr.js";
@@ -108,7 +108,7 @@ const BookHeader = ({ book, isSuggest }) => {
     {
       key: 3,
       label: "Tags",
-      children: book.categories.map((item) => /* @__PURE__ */ jsx(Tag, { children: item.name }, item.id))
+      children: /* @__PURE__ */ jsx(Flex, { gap: "small", wrap: true, children: book.categories.map((item) => /* @__PURE__ */ jsx(Tag, { children: item.name }, item.id)) })
     }
   ];
   const items = [
@@ -175,7 +175,7 @@ const BookHeader = ({ book, isSuggest }) => {
       ] }),
       /* @__PURE__ */ jsxs(Row, { className: "my-4", children: [
         /* @__PURE__ */ jsx(Col, { flex: 1, children: isAuth && !isSuggest ? /* @__PURE__ */ jsx(FavoriteButton, { followCount, bookId: book.id, onFollow: setActiveFollow }) : null }),
-        /* @__PURE__ */ jsx(Col, { flex: 1, className: "justify-end", children: /* @__PURE__ */ jsxs(Flex, { wrap: true, gap: "small", children: [
+        /* @__PURE__ */ jsx(Col, { flex: 1, children: /* @__PURE__ */ jsxs(Flex, { className: "w-full justify-end", wrap: true, gap: "small", children: [
           /* @__PURE__ */ jsx(
             FacebookShare,
             {
