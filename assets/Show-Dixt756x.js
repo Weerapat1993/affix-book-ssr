@@ -2,7 +2,7 @@ import { jsx, jsxs } from "react/jsx-runtime";
 import { A as Authenticated } from "./AuthenticatedLayout-B4iinvfv.js";
 import { Link } from "@inertiajs/react";
 import { List, Avatar, Card, Button, FloatButton, Typography } from "antd";
-import { B as BookHeader } from "./BookHeader-OZjLNpm2.js";
+import { B as BookHeader } from "./BookHeader-Ch4YBplW.js";
 import { d as dateHuman, u as usePermission } from "./FooterLayout-BaEYPs1Z.js";
 import { a as asset } from "./laravelBlade-DwBdVrdx.js";
 import { UserOutlined, PlusOutlined } from "@ant-design/icons";
@@ -16,6 +16,7 @@ import "lucide-react";
 import "clsx";
 import "tailwind-merge";
 import "@radix-ui/react-slot";
+import "react-share-kit";
 import "../ssr.js";
 import "react-dom/server";
 import "@inertiajs/react/server";
@@ -84,7 +85,12 @@ function BookShow({ book }) {
     {
       key: 2,
       title: book.type,
-      href: route(`books.${snakeOne(book.type)}`),
+      href: route(`books.${snakeOne(book.type)}`)
+    },
+    {
+      key: 3,
+      title: book.title,
+      href: route(`books.show`, book.id),
       isLast: true
     }
   ];

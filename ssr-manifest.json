@@ -22,13 +22,13 @@
     "/build/assets/BookList-ZKp8cxz0.js"
   ],
   "resources/js/Components/Book/BookHeader.tsx": [
-    "/build/assets/BookHeader-OZjLNpm2.js"
+    "/build/assets/BookHeader-Ch4YBplW.js"
   ],
   "resources/js/Components/Book/BookList.tsx": [
     "/build/assets/BookList-ZKp8cxz0.js"
   ],
   "resources/js/Components/Book/FavouriteButton.tsx": [
-    "/build/assets/BookHeader-OZjLNpm2.js"
+    "/build/assets/BookHeader-Ch4YBplW.js"
   ],
   "resources/js/Components/Book/Form/BookForm.tsx": [
     "/build/assets/BookForm-DL-Fhx38.js"
@@ -46,7 +46,7 @@
     "/build/assets/Type-DW_RtLR1.js"
   ],
   "resources/js/Components/Book/Hooks/useFavoriteButton.ts": [
-    "/build/assets/BookHeader-OZjLNpm2.js"
+    "/build/assets/BookHeader-Ch4YBplW.js"
   ],
   "resources/js/Components/Book/LatestBookCard.tsx": [
     "/build/assets/Home-CHs9U1IZ.js"
@@ -55,7 +55,7 @@
     "/build/assets/Home-CHs9U1IZ.js"
   ],
   "resources/js/Components/Book/SuggestBookCarousel.tsx": [
-    "/build/assets/Index-BIVbpYnD.js"
+    "/build/assets/Index-ClFEdTwQ.js"
   ],
   "resources/js/Components/Card.tsx": [
     "/build/assets/Card-Dj6_F9pc.js"
@@ -64,7 +64,7 @@
     "/build/assets/AdminHeader-ExHnE0gF.js"
   ],
   "resources/js/Components/Chapter/ChapterBookList.tsx": [
-    "/build/assets/Show-qMGXEWmX.js"
+    "/build/assets/Show-Dixt756x.js"
   ],
   "resources/js/Components/Chapter/ChapterPageList.tsx": [
     "/build/assets/Show-CGPDTW6G.js"
@@ -379,10 +379,10 @@
     "/build/assets/Edit-C-bLBgEF.js"
   ],
   "resources/js/Pages/Book/Index.tsx": [
-    "/build/assets/Index-BIVbpYnD.js"
+    "/build/assets/Index-ClFEdTwQ.js"
   ],
   "resources/js/Pages/Book/Show.tsx": [
-    "/build/assets/Show-qMGXEWmX.js"
+    "/build/assets/Show-Dixt756x.js"
   ],
   "resources/js/Pages/Book/Type.tsx": [
     "/build/assets/Type-DW_RtLR1.js"

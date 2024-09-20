@@ -1,4 +1,5 @@
 import { jsx, jsxs } from "react/jsx-runtime";
+import { FacebookShare, TwitterShare } from "react-share-kit";
 import { useEffect, useState } from "react";
 import { a as asset, d as defaultBookCoverUrl } from "./laravelBlade-DwBdVrdx.js";
 import { Button, Tag, Row, Col, Image, Flex, Descriptions, Space, Typography, Modal } from "antd";
@@ -172,7 +173,30 @@ const BookHeader = ({ book, isSuggest }) => {
           }
         )
       ] }),
-      isAuth && !isSuggest ? /* @__PURE__ */ jsx(Flex, { className: "my-4", wrap: true, gap: "small", children: /* @__PURE__ */ jsx(FavoriteButton, { followCount, bookId: book.id, onFollow: setActiveFollow }) }) : null
+      /* @__PURE__ */ jsxs(Row, { className: "my-4", children: [
+        /* @__PURE__ */ jsx(Col, { flex: 1, children: isAuth && !isSuggest ? /* @__PURE__ */ jsx(FavoriteButton, { followCount, bookId: book.id, onFollow: setActiveFollow }) : null }),
+        /* @__PURE__ */ jsx(Col, { flex: 1, className: "justify-end", children: /* @__PURE__ */ jsxs(Flex, { wrap: true, gap: "small", children: [
+          /* @__PURE__ */ jsx(
+            FacebookShare,
+            {
+              url: route("books.show", book.id),
+              quote: book.title,
+              hashtag: "#affixbook",
+              size: 32,
+              round: true
+            }
+          ),
+          /* @__PURE__ */ jsx(
+            TwitterShare,
+            {
+              url: route("books.show", book.id),
+              title: `${book.title} ตอนใหม่มาแล้ว !!!`,
+              size: 32,
+              round: true
+            }
+          )
+        ] }) })
+      ] })
     ] })
   ] }) });
 };
