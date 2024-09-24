@@ -1,12 +1,12 @@
 import { jsxs, jsx, Fragment } from "react/jsx-runtime";
+import { useState, useCallback, useMemo, useEffect } from "react";
 import { useForm } from "@inertiajs/react";
 import { Transition } from "@headlessui/react";
 import { F as FormInput } from "./FormInput-DY6TuaZo.js";
 import { Upload, Image, Button, Progress, message, Row, Col, Modal, Affix, Flex, Space, Card, Radio, FloatButton } from "antd";
 import { I as InputError } from "./TextInput-DQL-42yE.js";
 import { I as InputLabel } from "./InputLabel-CaoVq05r.js";
-import { useState, useCallback, useMemo, useEffect } from "react";
-import { DeleteOutlined, LoadingOutlined, PlusOutlined, FileImageOutlined, BoldOutlined, ItalicOutlined, UnderlineOutlined, LineOutlined, LineHeightOutlined, FontSizeOutlined, CodeOutlined, MessageOutlined, AlignLeftOutlined, AlignCenterOutlined, AlignRightOutlined, SaveOutlined } from "@ant-design/icons";
+import { DeleteOutlined, LoadingOutlined, PlusOutlined, FileImageOutlined, BoldOutlined, ItalicOutlined, UnderlineOutlined, LineOutlined, LineHeightOutlined, FontSizeOutlined, CodeOutlined, MessageOutlined, AlignLeftOutlined, AlignCenterOutlined, AlignRightOutlined, EditOutlined, SaveOutlined } from "@ant-design/icons";
 import { g as getMeta, d as defaultBookCoverUrl, a as asset, s as strRandom } from "./laravelBlade-DwBdVrdx.js";
 import axios from "axios";
 import isHotkey from "is-hotkey";
@@ -631,6 +631,7 @@ const SlateEditor = ({ initialValue, onChange, bookId, chapter }) => {
 };
 const ChapterForm = ({ bookType, type, initialValues, chapterId, languages, listButtons, max, bookId }) => {
   const { user } = usePermission();
+  const [isEditChapter, setIsEditChapter] = useState(false);
   const { data, post, patch, reset, setData, processing, errors, recentlySuccessful } = useForm(initialValues);
   const onChangeStatus = ({ target: { value } }) => {
     setData("status", value);
@@ -684,36 +685,62 @@ const ChapterForm = ({ bookType, type, initialValues, chapterId, languages, list
   ];
   const isNovel = bookType === "Novel";
   return /* @__PURE__ */ jsxs(Card, { children: [
-    /* @__PURE__ */ jsx(InputLabel, { className: "mb-2", value: "Chapter" }),
-    /* @__PURE__ */ jsx(Flex, { wrap: true, gap: "small", children: arrPages.map((chapter) => {
-      let disabledChapterBtn;
-      switch (type) {
-        case "create":
-          disabledChapterBtn = chapter <= max;
-          break;
-        case "update":
-          disabledChapterBtn = chapter !== initialValues.chapter;
-          break;
-      }
-      return /* @__PURE__ */ jsx(
-        Button,
-        {
-          disabled: disabledChapterBtn,
-          type: "primary",
-          shape: "circle",
-          children: chapter
-        },
-        chapter
-      );
-    }) }),
+    !isEditChapter ? /* @__PURE__ */ jsxs(Fragment, { children: [
+      /* @__PURE__ */ jsx(InputLabel, { className: "mb-2", value: "Chapter" }),
+      /* @__PURE__ */ jsxs(Flex, { wrap: true, gap: "small", children: [
+        arrPages.map((chapter) => {
+          let disabledChapterBtn;
+          switch (type) {
+            case "create":
+              disabledChapterBtn = chapter <= max;
+              break;
+            case "update":
+              disabledChapterBtn = chapter !== initialValues.chapter;
+              break;
+          }
+          return /* @__PURE__ */ jsx(
+            Button,
+            {
+              disabled: disabledChapterBtn,
+              type: "primary",
+              shape: "circle",
+              children: chapter
+            },
+            chapter
+          );
+        }),
+        /* @__PURE__ */ jsx(
+          Button,
+          {
+            icon: /* @__PURE__ */ jsx(EditOutlined, {}),
+            onClick: () => setIsEditChapter(true),
+            type: "primary",
+            children: "แก้ไขเลขตอน"
+          }
+        )
+      ] })
+    ] }) : null,
     /* @__PURE__ */ jsxs("form", { onSubmit: submit, className: "mt-6 space-y-6", children: [
+      isEditChapter ? /* @__PURE__ */ jsx(
+        FormInput,
+        {
+          label: "Chapter",
+          type: "number",
+          name: "chapter",
+          value: data.chapter,
+          onChange: (e) => setData("chapter", parseInt(e.target.value)),
+          required: true,
+          isFocused: true,
+          errorMessage: errors.chapter
+        }
+      ) : null,
       /* @__PURE__ */ jsx(
         FormInput,
         {
           label: "Title",
-          value: data.title,
           type: "text",
           name: "title",
+          value: data.title,
           onChange: (e) => setData("title", e.target.value),
           required: true,
           isFocused: true,

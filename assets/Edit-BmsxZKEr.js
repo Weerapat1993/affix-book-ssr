@@ -1,13 +1,13 @@
 import { jsx, jsxs } from "react/jsx-runtime";
-import { C as ChapterForm } from "./ChapterForm-DbqbV3J1.js";
+import { C as ChapterForm } from "./ChapterForm--UT-C7PE.js";
 import { A as Authenticated } from "./AuthenticatedLayout-B4iinvfv.js";
 import { a as snakeOne } from "./case-CvDFCSZ_.js";
 import { Head } from "@inertiajs/react";
+import "react";
 import "@headlessui/react";
 import "./FormInput-DY6TuaZo.js";
 import "./InputLabel-CaoVq05r.js";
 import "./TextInput-DQL-42yE.js";
-import "react";
 import "antd";
 import "@ant-design/icons";
 import "./laravelBlade-DwBdVrdx.js";
@@ -88,7 +88,7 @@ const ChapterEdit = ({ book, chapter, allChaptersByBookId, languages }) => {
     {
       key: 4,
       title: `Ch. ${chapter.chapter}`,
-      href: route(`chapters.show`, chapter.id)
+      href: route(`chapters.show`, chapter.slug)
     },
     {
       key: 5,

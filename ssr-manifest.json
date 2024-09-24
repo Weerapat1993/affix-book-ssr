@@ -1,6 +1,6 @@
 {
   "node_modules/image-extensions/image-extensions.json": [
-    "/build/assets/ChapterForm-DbqbV3J1.js"
+    "/build/assets/ChapterForm--UT-C7PE.js"
   ],
   "node_modules/laravel-vite-plugin/inertia-helpers/index.js": [],
   "resources/js/Components/Admin/AdminHeader.tsx": [
@@ -79,19 +79,19 @@
     "/build/assets/MangaLayout-CIGYPAYf.js"
   ],
   "resources/js/Components/Chapter/Form/ChapterForm.tsx": [
-    "/build/assets/ChapterForm-DbqbV3J1.js"
+    "/build/assets/ChapterForm--UT-C7PE.js"
   ],
   "resources/js/Components/Chapter/Form/CreateChapterForm.tsx": [
-    "/build/assets/Create-CA_wx9XZ.js"
+    "/build/assets/Create-C8ejZ9Xy.js"
   ],
   "resources/js/Components/Chapter/Form/EditChapterForm.tsx": [
-    "/build/assets/Edit-ClR4sREM.js"
+    "/build/assets/Edit-BmsxZKEr.js"
   ],
   "resources/js/Components/Chapter/Form/MangaForm.tsx": [
-    "/build/assets/ChapterForm-DbqbV3J1.js"
+    "/build/assets/ChapterForm--UT-C7PE.js"
   ],
   "resources/js/Components/Chapter/Form/MangaPageInput.tsx": [
-    "/build/assets/ChapterForm-DbqbV3J1.js"
+    "/build/assets/ChapterForm--UT-C7PE.js"
   ],
   "resources/js/Components/Checkbox.tsx": [
     "/build/assets/Login-CvMfJ4mz.js"
@@ -109,19 +109,19 @@
     "/build/assets/ProductForm-C_IKBgWp.js"
   ],
   "resources/js/Components/Editor/Components/Button/BlockButton.tsx": [
-    "/build/assets/ChapterForm-DbqbV3J1.js"
+    "/build/assets/ChapterForm--UT-C7PE.js"
   ],
   "resources/js/Components/Editor/Components/Button/MarkButton.tsx": [
-    "/build/assets/ChapterForm-DbqbV3J1.js"
+    "/build/assets/ChapterForm--UT-C7PE.js"
   ],
   "resources/js/Components/Editor/Components/Image/InsertImageButton.tsx": [
-    "/build/assets/ChapterForm-DbqbV3J1.js"
+    "/build/assets/ChapterForm--UT-C7PE.js"
   ],
   "resources/js/Components/Editor/Components/Image/SlateImage.tsx": [
     "/build/assets/mark-B_-F7f3x.js"
   ],
   "resources/js/Components/Editor/Components/Image/withImage.ts": [
-    "/build/assets/ChapterForm-DbqbV3J1.js"
+    "/build/assets/ChapterForm--UT-C7PE.js"
   ],
   "resources/js/Components/Editor/Components/Render/Element.tsx": [
     "/build/assets/mark-B_-F7f3x.js"
@@ -133,10 +133,10 @@
     "/build/assets/Novel-BX-D5RrS.js"
   ],
   "resources/js/Components/Editor/Components/SlateToolbar.tsx": [
-    "/build/assets/ChapterForm-DbqbV3J1.js"
+    "/build/assets/ChapterForm--UT-C7PE.js"
   ],
   "resources/js/Components/Editor/SlateEditor.tsx": [
-    "/build/assets/ChapterForm-DbqbV3J1.js"
+    "/build/assets/ChapterForm--UT-C7PE.js"
   ],
   "resources/js/Components/Editor/Utils/fixEditor.ts": [
     "/build/assets/mark-B_-F7f3x.js"
@@ -388,10 +388,10 @@
     "/build/assets/Type-DW_RtLR1.js"
   ],
   "resources/js/Pages/Chapter/Create.tsx": [
-    "/build/assets/Create-CA_wx9XZ.js"
+    "/build/assets/Create-C8ejZ9Xy.js"
   ],
   "resources/js/Pages/Chapter/Edit.tsx": [
-    "/build/assets/Edit-ClR4sREM.js"
+    "/build/assets/Edit-BmsxZKEr.js"
   ],
   "resources/js/Pages/Chapter/Limit.tsx": [
     "/build/assets/Limit-ClEhJNLQ.js"
