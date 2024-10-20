@@ -22,13 +22,13 @@
     "/build/assets/BookList-ZKp8cxz0.js"
   ],
   "resources/js/Components/Book/BookHeader.tsx": [
-    "/build/assets/BookHeader-C0VsXSPB.js"
+    "/build/assets/BookHeader-CeV7mFQ3.js"
   ],
   "resources/js/Components/Book/BookList.tsx": [
     "/build/assets/BookList-ZKp8cxz0.js"
   ],
   "resources/js/Components/Book/FavouriteButton.tsx": [
-    "/build/assets/BookHeader-C0VsXSPB.js"
+    "/build/assets/BookHeader-CeV7mFQ3.js"
   ],
   "resources/js/Components/Book/Form/BookForm.tsx": [
     "/build/assets/BookForm-DL-Fhx38.js"
@@ -46,7 +46,7 @@
     "/build/assets/Type-Ds3GrS1A.js"
   ],
   "resources/js/Components/Book/Hooks/useFavoriteButton.ts": [
-    "/build/assets/BookHeader-C0VsXSPB.js"
+    "/build/assets/BookHeader-CeV7mFQ3.js"
   ],
   "resources/js/Components/Book/LatestBookCard.tsx": [
     "/build/assets/Home-DLgOa0N6.js"
@@ -55,7 +55,7 @@
     "/build/assets/Home-DLgOa0N6.js"
   ],
   "resources/js/Components/Book/SuggestBookCarousel.tsx": [
-    "/build/assets/Index-BCfkWI8U.js"
+    "/build/assets/Index-Cx4CwCKP.js"
   ],
   "resources/js/Components/Card.tsx": [
     "/build/assets/Card-Dj6_F9pc.js"
@@ -64,10 +64,10 @@
     "/build/assets/AdminHeader-ExHnE0gF.js"
   ],
   "resources/js/Components/Chapter/ChapterBookList.tsx": [
-    "/build/assets/Show-CKKGkkYK.js"
+    "/build/assets/Show-BXSrGJhv.js"
   ],
   "resources/js/Components/Chapter/ChapterPageList.tsx": [
-    "/build/assets/Show-Dtv7VQK0.js"
+    "/build/assets/Show-dQx_U90s.js"
   ],
   "resources/js/Components/Chapter/Drawer/HamburgerMenu.tsx": [
     "/build/assets/LayoutBreadcrumb-DJY5I72l.js"
@@ -76,7 +76,7 @@
     "/build/assets/LayoutBreadcrumb-DJY5I72l.js"
   ],
   "resources/js/Components/Chapter/Drawer/PageDrawer.tsx": [
-    "/build/assets/MangaLayout-C4_oFL-E.js"
+    "/build/assets/MangaLayout-B-n50sOT.js"
   ],
   "resources/js/Components/Chapter/Form/ChapterForm.tsx": [
     "/build/assets/ChapterForm-stEkaaL-.js"
@@ -130,7 +130,7 @@
     "/build/assets/mark-B_-F7f3x.js"
   ],
   "resources/js/Components/Editor/Components/SlateResult.tsx": [
-    "/build/assets/Novel-C-MBe5OD.js"
+    "/build/assets/Novel-D5g-czEb.js"
   ],
   "resources/js/Components/Editor/Components/SlateToolbar.tsx": [
     "/build/assets/ChapterForm-stEkaaL-.js"
@@ -334,7 +334,7 @@
     "/build/assets/GuestLayout-Di1XimAN.js"
   ],
   "resources/js/Layouts/MangaLayout.tsx": [
-    "/build/assets/MangaLayout-C4_oFL-E.js"
+    "/build/assets/MangaLayout-B-n50sOT.js"
   ],
   "resources/js/Pages/About.tsx": [
     "/build/assets/About-BzLRNjzO.js"
@@ -379,10 +379,10 @@
     "/build/assets/Edit-DpJ2NLl4.js"
   ],
   "resources/js/Pages/Book/Index.tsx": [
-    "/build/assets/Index-BCfkWI8U.js"
+    "/build/assets/Index-Cx4CwCKP.js"
   ],
   "resources/js/Pages/Book/Show.tsx": [
-    "/build/assets/Show-CKKGkkYK.js"
+    "/build/assets/Show-BXSrGJhv.js"
   ],
   "resources/js/Pages/Book/Type.tsx": [
     "/build/assets/Type-Ds3GrS1A.js"
@@ -397,10 +397,10 @@
     "/build/assets/Limit-BE57HUac.js"
   ],
   "resources/js/Pages/Chapter/Novel.tsx": [
-    "/build/assets/Novel-C-MBe5OD.js"
+    "/build/assets/Novel-D5g-czEb.js"
   ],
   "resources/js/Pages/Chapter/Show.tsx": [
-    "/build/assets/Show-Dtv7VQK0.js"
+    "/build/assets/Show-dQx_U90s.js"
   ],
   "resources/js/Pages/Errors/404.tsx": [
     "/build/assets/404-DC0rO4bK.js"

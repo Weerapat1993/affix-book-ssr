@@ -2,7 +2,7 @@ import { jsxs, jsx } from "react/jsx-runtime";
 import { Row, Col, Image, Flex, Spin, Anchor, FloatButton } from "antd";
 import { a as asset, b as defaultMangaPageUrl } from "./laravelBlade-DwBdVrdx.js";
 import { useState, useCallback } from "react";
-import { M as MangaLayout } from "./MangaLayout-C4_oFL-E.js";
+import { M as MangaLayout } from "./MangaLayout-B-n50sOT.js";
 import { d as defaultMeta } from "./seo-B2m5Eufc.js";
 import { S as SeoHead } from "./SeoHead-DmWXeTpm.js";
 import { a as snakeOne } from "./case-CvDFCSZ_.js";
@@ -30,7 +30,7 @@ import "react-share-kit";
 import "case";
 import "pluralize";
 const ChapterPageList = ({ list }) => {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(2);
   const items = list.slice(0, page).map((item) => ({
     key: `page-${item.page}`,
     href: `#page-${item.page}`,
@@ -83,13 +83,15 @@ const ChapterPageList = ({ list }) => {
 };
 const ChapterPageList$1 = ChapterPageList;
 function ChapterShow({ auth, chapter, allChapterList }) {
-  var _a, _b, _c, _d, _e, _f, _g;
+  var _a, _b, _c, _d, _e, _f, _g, _h, _i;
+  const metaImage = asset(`storage/${(_b = (_a = chapter.pages) == null ? void 0 : _a.filter((item) => item.page === 1)) == null ? void 0 : _b[0].img_url}`);
   const meta = {
-    title: `Chapter ${chapter.chapter} - ${chapter.title} - Affixbook.net | เว็บไซต์อ่านหนังสือออนไลน์`,
-    description: ((_a = chapter.book) == null ? void 0 : _a.synopsis) || defaultMeta.description,
-    keywords: (((_b = chapter.book) == null ? void 0 : _b.categories) || []).map((key) => key.name),
+    title: `Chapter ${chapter.chapter} : ${chapter.title} - Affixbook.net | เว็บไซต์อ่านหนังสือออนไลน์`,
+    description: ((_c = chapter.book) == null ? void 0 : _c.synopsis) || defaultMeta.description,
+    keywords: (((_d = chapter.book) == null ? void 0 : _d.categories) || []).map((key) => key.name),
     author: "",
-    canonical: route("chapters.show", chapter.slug)
+    canonical: route("chapters.show", chapter.slug),
+    image: metaImage
   };
   const breadcrumbs = [
     {
@@ -99,20 +101,20 @@ function ChapterShow({ auth, chapter, allChapterList }) {
     },
     {
       key: 2,
-      title: (_c = chapter.book) == null ? void 0 : _c.type,
-      href: route(`books.${snakeOne(((_d = chapter.book) == null ? void 0 : _d.type) || "")}`)
+      title: (_e = chapter.book) == null ? void 0 : _e.type,
+      href: route(`books.${snakeOne(((_f = chapter.book) == null ? void 0 : _f.type) || "")}`)
     },
     {
       key: 3,
-      title: (_e = chapter.book) == null ? void 0 : _e.title,
-      href: route(`books.show`, (_f = chapter.book) == null ? void 0 : _f.id),
+      title: (_g = chapter.book) == null ? void 0 : _g.title,
+      href: route(`books.show`, (_h = chapter.book) == null ? void 0 : _h.id),
       isLinkLast: true
     }
   ];
   return /* @__PURE__ */ jsxs(
     MangaLayout,
     {
-      title: ((_g = chapter == null ? void 0 : chapter.book) == null ? void 0 : _g.title) || "",
+      title: ((_i = chapter == null ? void 0 : chapter.book) == null ? void 0 : _i.title) || "",
       user: auth.user,
       bookId: chapter.book_id,
       defaultChapter: chapter.chapter,

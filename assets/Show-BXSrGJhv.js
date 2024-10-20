@@ -2,7 +2,7 @@ import { jsx, jsxs } from "react/jsx-runtime";
 import { A as Authenticated } from "./AuthenticatedLayout-DBF1SR-y.js";
 import { Link } from "@inertiajs/react";
 import { List, Avatar, Card, Button, FloatButton, Typography } from "antd";
-import { B as BookHeader } from "./BookHeader-C0VsXSPB.js";
+import { B as BookHeader } from "./BookHeader-CeV7mFQ3.js";
 import { d as dateHuman, u as usePermission } from "./LayoutBreadcrumb-DJY5I72l.js";
 import { a as asset } from "./laravelBlade-DwBdVrdx.js";
 import { UserOutlined, PlusOutlined } from "@ant-design/icons";
@@ -74,7 +74,8 @@ function BookShow({ book }) {
     description: (book == null ? void 0 : book.synopsis) || "",
     keywords: ((book == null ? void 0 : book.categories) || []).map((key) => key.name),
     author: "",
-    canonical: route("books.show", book.id)
+    canonical: route("books.show", book.id),
+    image: asset(`storage/${book.img_url}`)
   };
   const breadcrumbs = [
     {

@@ -180,7 +180,8 @@ const BookHeader = ({ book, isSuggest }) => {
             FacebookShare,
             {
               url: route("books.show", book.id),
-              quote: book.title,
+              title: `${book.title} ตอนใหม่มาแล้ว !!!`,
+              quote: `${book.title} ตอนใหม่มาแล้ว !!!`,
               hashtag: "#affixbook",
               size: 32,
               round: true

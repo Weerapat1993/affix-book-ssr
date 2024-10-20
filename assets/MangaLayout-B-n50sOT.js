@@ -69,7 +69,8 @@ const PageDrawer = ({ list, defaultChapter, bookId, title }) => {
           FacebookShare,
           {
             url: route("chapters.show", chapter.slug),
-            quote: `Chapter ${chapter.chapter} : ${chapter.title}`,
+            title: `Chapter ${chapter.chapter} : ${chapter.title} ตอนใหม่มาแล้ว !!!`,
+            quote: `Chapter ${chapter.chapter} : ${chapter.title} ตอนใหม่มาแล้ว !!!`,
             hashtag: "#affixbook",
             size: 32,
             round: true
