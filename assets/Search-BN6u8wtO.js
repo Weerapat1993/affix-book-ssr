@@ -1,7 +1,7 @@
 import { jsxs, jsx } from "react/jsx-runtime";
 import { A as Authenticated } from "./AuthenticatedLayout-DBF1SR-y.js";
 import { Head } from "@inertiajs/react";
-import { u as useSearch, S as SearchBar } from "./SearchBar-sJ5Ct-wl.js";
+import { u as useSearch, S as SearchBar } from "./SearchBar-EL1mxRAC.js";
 import { B as BookList } from "./BookList-ZKp8cxz0.js";
 import { Empty, Spin, Card, Typography } from "antd";
 import { B as BannerAdvertising } from "./BannerAdvertising-BVHjhyzk.js";

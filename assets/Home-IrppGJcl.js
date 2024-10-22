@@ -4,7 +4,7 @@ import { Space, Card, Image, Typography, Row, Col, Empty, Divider, FloatButton }
 import { Link } from "@inertiajs/react";
 import { a as asset, d as defaultBookCoverUrl } from "./laravelBlade-DwBdVrdx.js";
 import { d as dateHuman } from "./LayoutBreadcrumb-DJY5I72l.js";
-import { S as SearchBar } from "./SearchBar-sJ5Ct-wl.js";
+import { S as SearchBar } from "./SearchBar-EL1mxRAC.js";
 import { S as SeoHead } from "./SeoHead-DmWXeTpm.js";
 import { d as defaultMeta } from "./seo-B2m5Eufc.js";
 import { B as BannerAdvertising } from "./BannerAdvertising-BVHjhyzk.js";

@@ -49,10 +49,10 @@
     "/build/assets/BookHeader-CeV7mFQ3.js"
   ],
   "resources/js/Components/Book/LatestBookCard.tsx": [
-    "/build/assets/Home-DLgOa0N6.js"
+    "/build/assets/Home-IrppGJcl.js"
   ],
   "resources/js/Components/Book/LatestBookList.tsx": [
-    "/build/assets/Home-DLgOa0N6.js"
+    "/build/assets/Home-IrppGJcl.js"
   ],
   "resources/js/Components/Book/SuggestBookCarousel.tsx": [
     "/build/assets/Index-Cx4CwCKP.js"
@@ -64,10 +64,10 @@
     "/build/assets/AdminHeader-ExHnE0gF.js"
   ],
   "resources/js/Components/Chapter/ChapterBookList.tsx": [
-    "/build/assets/Show-BXSrGJhv.js"
+    "/build/assets/Show-DrYrMX1m.js"
   ],
   "resources/js/Components/Chapter/ChapterPageList.tsx": [
-    "/build/assets/Show-dQx_U90s.js"
+    "/build/assets/Show-BNa8LEDe.js"
   ],
   "resources/js/Components/Chapter/Drawer/HamburgerMenu.tsx": [
     "/build/assets/LayoutBreadcrumb-DJY5I72l.js"
@@ -187,10 +187,10 @@
     "/build/assets/CategoryFilter-DQ8CAepx.js"
   ],
   "resources/js/Components/Search/Hooks/useSearch.ts": [
-    "/build/assets/SearchBar-sJ5Ct-wl.js"
+    "/build/assets/SearchBar-EL1mxRAC.js"
   ],
   "resources/js/Components/Search/SearchBar.tsx": [
-    "/build/assets/SearchBar-sJ5Ct-wl.js"
+    "/build/assets/SearchBar-EL1mxRAC.js"
   ],
   "resources/js/Components/Search/SearchImageFromText.tsx": [
     "/build/assets/ProductForm-oktHXOhk.js"
@@ -205,16 +205,19 @@
     "/build/assets/UploadInput-BeCvrvnD.js"
   ],
   "resources/js/Components/Writer/Hooks/useWriterBook.ts": [
-    "/build/assets/Index-BVKGW97E.js"
+    "/build/assets/Index-ugoS2BMm.js"
   ],
   "resources/js/Components/Writer/Hooks/useWriterByUser.ts": [
-    "/build/assets/Show-BuR9g8Ho.js"
+    "/build/assets/useWriterByUser-Csq1RLaB.js"
   ],
   "resources/js/Components/Writer/SearchBookForWriter.tsx": [
-    "/build/assets/Index-BVKGW97E.js"
+    "/build/assets/Index-ugoS2BMm.js"
   ],
   "resources/js/Components/Writer/UserProfileHeader.tsx": [
     "/build/assets/UserProfileHeader-D1ITc6VY.js"
+  ],
+  "resources/js/Components/Writer/WriterList.tsx": [
+    "/build/assets/Show-BNa8LEDe.js"
   ],
   "resources/js/Components/banner/BannerAdvertising.tsx": [
     "/build/assets/BannerAdvertising-BVHjhyzk.js"
@@ -382,7 +385,7 @@
     "/build/assets/Index-Cx4CwCKP.js"
   ],
   "resources/js/Pages/Book/Show.tsx": [
-    "/build/assets/Show-BXSrGJhv.js"
+    "/build/assets/Show-DrYrMX1m.js"
   ],
   "resources/js/Pages/Book/Type.tsx": [
     "/build/assets/Type-Ds3GrS1A.js"
@@ -400,13 +403,13 @@
     "/build/assets/Novel-CFXn9OvL.js"
   ],
   "resources/js/Pages/Chapter/Show.tsx": [
-    "/build/assets/Show-dQx_U90s.js"
+    "/build/assets/Show-BNa8LEDe.js"
   ],
   "resources/js/Pages/Errors/404.tsx": [
     "/build/assets/404-DC0rO4bK.js"
   ],
   "resources/js/Pages/Home.tsx": [
-    "/build/assets/Home-DLgOa0N6.js"
+    "/build/assets/Home-IrppGJcl.js"
   ],
   "resources/js/Pages/Library.tsx": [
     "/build/assets/Library-tdcqG2x1.js"
@@ -436,7 +439,7 @@
     "/build/assets/UpdateProfileInformationForm-BsNMzuAO.js"
   ],
   "resources/js/Pages/Search.tsx": [
-    "/build/assets/Search-C_P04v2I.js"
+    "/build/assets/Search-BN6u8wtO.js"
   ],
   "resources/js/Pages/Upload/Create.tsx": [
     "/build/assets/Create-CLTL0mRp.js"
@@ -448,7 +451,7 @@
     "/build/assets/Complete-sl9s1FO9.js"
   ],
   "resources/js/Pages/Writer/Index.tsx": [
-    "/build/assets/Index-BVKGW97E.js"
+    "/build/assets/Index-ugoS2BMm.js"
   ],
   "resources/js/Pages/Writer/List.tsx": [
     "/build/assets/List-DehfP1F6.js"
@@ -457,7 +460,7 @@
     "/build/assets/Register-s5LDV8Zp.js"
   ],
   "resources/js/Pages/Writer/Show.tsx": [
-    "/build/assets/Show-BuR9g8Ho.js"
+    "/build/assets/Show-2We6OCIK.js"
   ],
   "resources/js/Pages/Writer/SubmissionFailed.tsx": [
     "/build/assets/SubmissionFailed-eW6J4Wx8.js"

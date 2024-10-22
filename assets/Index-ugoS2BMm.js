@@ -4,7 +4,7 @@ import { Head, Link } from "@inertiajs/react";
 import { SearchOutlined, PlusOutlined } from "@ant-design/icons";
 import { App, Input, Flex, Pagination, Button, Card, FloatButton } from "antd";
 import { B as BookList } from "./BookList-ZKp8cxz0.js";
-import { m as setFlash, n as setFilterTitle, o as setPage, p as clearPages, q as getWriterBookList } from "../ssr.js";
+import { p as setFlash, q as setFilterTitle, t as setPage, v as clearPages, w as getWriterBookList } from "../ssr.js";
 import { a as useAppSelector, b as useAppDispatch } from "./LayoutBreadcrumb-DJY5I72l.js";
 import { useEffect, useCallback, useState } from "react";
 import { usePrevious, useDebounce } from "react-use";

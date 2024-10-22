@@ -3,7 +3,7 @@ import { SearchOutlined, ArrowRightOutlined, HeartFilled } from "@ant-design/ico
 import { useForm, Link } from "@inertiajs/react";
 import { AutoComplete, Input, Space, Flex, Image, Tag, Typography } from "antd";
 import { useCallback, useState, useMemo } from "react";
-import { l as getSearch } from "../ssr.js";
+import { o as getSearch } from "../ssr.js";
 import { a as useAppSelector, b as useAppDispatch } from "./LayoutBreadcrumb-DJY5I72l.js";
 import { useDebounce } from "react-use";
 import { a as asset, d as defaultBookCoverUrl } from "./laravelBlade-DwBdVrdx.js";

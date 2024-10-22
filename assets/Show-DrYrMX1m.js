@@ -75,7 +75,7 @@ function BookShow({ book }) {
     keywords: ((book == null ? void 0 : book.categories) || []).map((key) => key.name),
     author: "",
     canonical: route("books.show", book.id),
-    image: asset(`storage/${book.img_url}`)
+    image: `/storage/${book.img_url}`
   };
   const breadcrumbs = [
     {
