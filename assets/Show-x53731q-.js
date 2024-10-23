@@ -160,8 +160,8 @@ function ChapterShow({ auth, chapter, allChapterList }) {
       children: [
         /* @__PURE__ */ jsx(SeoHead, { meta }),
         /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto sm:px-6 lg:px-8 pb-12", children: [
-          /* @__PURE__ */ jsx(ChapterPageList$1, { list: chapter.pages || [] }),
-          /* @__PURE__ */ jsx(WriterList$1, { userId: chapter.user_id, bookId: chapter.book_id }),
+          /* @__PURE__ */ jsx(ChapterPageList$1, { list: (chapter == null ? void 0 : chapter.pages) || [] }),
+          (chapter == null ? void 0 : chapter.user_id) && (chapter == null ? void 0 : chapter.book_id) ? /* @__PURE__ */ jsx(WriterList$1, { userId: chapter == null ? void 0 : chapter.user_id, bookId: chapter == null ? void 0 : chapter.book_id }) : null,
           /* @__PURE__ */ jsx(FloatButton.BackTop, {})
         ] })
       ]
